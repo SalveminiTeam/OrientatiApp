@@ -36,7 +36,7 @@ export class Viewer360Component {
         this.camera.position.z = 0.01;
 
         this.controls = new THREE.OrbitControls(this.camera);
-        this.controls.enableZoom = true;
+        this.controls.enableZoom = false;
         this.controls.enablePan = false;
 
         var textures = this.getTexturesFromAtlasFile("../../assets/360photos/" + imagePath + ".png", 6);
