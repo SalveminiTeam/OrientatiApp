@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+
+import { Viewer } from '../viewer/viewer'
 
 @Component({
   selector: 'page-home',
@@ -9,6 +11,11 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  show360(img: string, ttl: string) {
+
+      this.navCtrl.push(Viewer, { image: img, title: ttl } )
   }
 
 }

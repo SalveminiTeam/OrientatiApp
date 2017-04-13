@@ -39,7 +39,7 @@ export class Viewer360Component {
         this.controls.enableZoom = true;
         this.controls.enablePan = false;
 
-        var textures = this.getTexturesFromAtlasFile("../../assets/360photos/" + imagePath, 6);
+        var textures = this.getTexturesFromAtlasFile("../../assets/360photos/" + imagePath + ".png", 6);
 
         var materials = [];
 
