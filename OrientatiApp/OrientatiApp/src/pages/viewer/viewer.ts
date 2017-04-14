@@ -23,16 +23,17 @@ export class Viewer implements AfterViewInit {
 
   ionViewWillEnter() {
       this.tabBarElement.style.display = 'none';
+      this.Viewer360.startAnimation();
   }
 
   ionViewWillLeave() {
       this.tabBarElement.style.display = 'flex';
+      this.Viewer360.stopAnimation();
   }
 
   ngAfterViewInit() {
       if (this.Viewer360) {
           this.Viewer360.Init(this.image);
-          this.Viewer360.animate();
       }
   }
 

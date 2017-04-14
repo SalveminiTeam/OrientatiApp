@@ -13,6 +13,7 @@ export class Viewer360Component {
     renderer;
     scene;
     manager;
+    animating: boolean;
 
     @ViewChild("container") container: ElementRef;
 
@@ -124,13 +125,27 @@ export class Viewer360Component {
         return this.controls.autoRotate;
     }
 
-    public animate() {
+
+    startAnimation() {
+        /*let width = this.Viewer360Element.nativeElement.childNodes[0].clientWidth;
+        let height = this.Viewer360Element.nativeElement.childNodes[0].clientHeight;
+        this.renderer.setSize(width, height);*/
+        this.animating = true;
+        this.render();
+    }
+
+    stopAnimation() {
+        this.animating = false;
+    }
+
+    render() {
 
         this.controls.update();
 
         this.renderer.render(this.scene, this.camera);
-
-        requestAnimationFrame(() => { this.animate() });
+        if (this.animating) { requestAnimationFrame(() => { this.render() }); };
     }
+
+
 }
 
