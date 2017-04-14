@@ -1,7 +1,17 @@
 ﻿<ion-header>
-  <ion-navbar color="viewer">
+  <ion-toolbar color="viewer">
+    <ion-buttons left class="back">
+      <button ion-button icon-only color="light" (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>{{title}}</ion-title>
-  </ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="toggleMode()">
+        <ion-icon name="compass"></ion-icon>
+      </button>
+    </ion-buttons>
+</ion-toolbar>
 </ion-header>
 
 <viewer360 #viewer></viewer360>

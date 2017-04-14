@@ -38,6 +38,7 @@ export class Viewer360Component {
         this.controls = new THREE.OrbitControls(this.camera);
         this.controls.enableZoom = false;
         this.controls.enablePan = false;
+        this.controls.autoRotate = true;
 
         var textures = this.getTexturesFromAtlasFile("../../assets/360photos/" + imagePath + ".png", 6);
 
@@ -95,6 +96,20 @@ export class Viewer360Component {
         imageObj.src = atlasImgUrl;
 
         return textures;
+    }
+
+    public toggleControls() {
+
+        if (this.controls instanceof THREE.OrbitControls) {
+            this.controls = new THREE.DeviceOrientationControls(this.camera);
+        } else {
+            this.controls = new THREE.OrbitControls(this.camera);
+            this.controls.reset();
+            this.controls.enableZoom = false;
+            this.controls.enablePan = false;
+            this.controls.autoRotate = true;
+        }
+
     }
 
     public animate() {

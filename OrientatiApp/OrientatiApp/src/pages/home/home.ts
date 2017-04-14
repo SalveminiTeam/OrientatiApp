@@ -14,8 +14,7 @@ export class HomePage {
   }
 
   show360(img: string, ttl: string) {
-
-      this.navCtrl.push(Viewer, { image: img, title: ttl } )
+      this.navCtrl.push(Viewer, { image: img, title: ttl }, { animation: 'md-transition' } )
   }
 
 }

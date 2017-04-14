@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @author qiao / https://github.com/qiao
  * @author mrdoob / http://mrdoob.com
  * @author alteredq / http://alteredqualia.com/
@@ -78,7 +78,8 @@ THREE.OrbitControls = function ( object, domElement ) {
 	// for reset
 	this.target0 = this.target.clone();
 	this.position0 = this.object.position.clone();
-	this.zoom0 = this.object.zoom;
+    this.zoom0 = this.object.zoom;
+    this.quaternion0 = this.object.quaternion.clone();
 
 	//
 	// public methods
@@ -100,8 +101,10 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 		scope.target.copy( scope.target0 );
 		scope.object.position.copy( scope.position0 );
-		scope.object.zoom = scope.zoom0;
+        scope.object.zoom = scope.zoom0;
 
+        scope.object.quaternion.copy( scope.quaternion0 );
+         
 		scope.object.updateProjectionMatrix();
 		scope.dispatchEvent( changeEvent );
 
@@ -117,7 +120,8 @@ THREE.OrbitControls = function ( object, domElement ) {
 		var offset = new THREE.Vector3();
 
 		// so camera.up is the orbit axis
-		var quat = new THREE.Quaternion().setFromUnitVectors( object.up, new THREE.Vector3( 0, 1, 0 ) );
+        var quat = new THREE.Quaternion().setFromUnitVectors(object.up, new THREE.Vector3(0, 1, 0));
+        
 		var quatInverse = quat.clone().inverse();
 
 		var lastPosition = new THREE.Vector3();
