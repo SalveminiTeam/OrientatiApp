@@ -9,6 +9,7 @@ import { MappaPage } from '../pages/mappa/mappa';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Viewer } from '../pages/viewer/viewer';
 import { Viewer360Component } from '../components/viewer360/viewer360';
+import { ImgBlurComponent } from '../components/imgBlur/imgBlur';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -22,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MappaPage,
     TabsPage,
     Viewer,
-    Viewer360Component
+    Viewer360Component,
+    ImgBlurComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MappaPage,
     TabsPage,
     Viewer,
-    Viewer360Component
+    Viewer360Component,
+    ImgBlurComponent
   ],
   providers: [
     StatusBar,

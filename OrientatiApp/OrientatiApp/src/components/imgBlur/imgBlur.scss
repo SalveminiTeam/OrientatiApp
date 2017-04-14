@@ -1,0 +1,20 @@
+﻿imgBlur {
+  .effet {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto 50px auto;
+    box-shadow: 0 1px 5px rgba(0,0,0,.5);
+  }
+
+  .effet img {
+    position: absolute;
+  }
+
+  .filtre--l {
+    -webkit-mask: -webkit-linear-gradient(black, transparent 30%, black);
+    -webkit-mask: linear-gradient(black, transparent 30%, black);
+    -webkit-filter: blur(3px);
+    mask: url('#mask-linear');
+    filter: url('#filtre2');
+  }
+}

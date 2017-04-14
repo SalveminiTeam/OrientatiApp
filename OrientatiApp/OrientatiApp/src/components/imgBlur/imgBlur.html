@@ -1,0 +1,19 @@
+﻿<div class="effet">
+  <img src="{{Image}}" alt="" />
+  <img class="filtre filtre--l" src="{{Image}}" alt="" />
+</div>
+<svg height="0">
+  <defs>
+    <mask id="mask-linear">
+      <rect width="400" height="300" fill="url(#l1)"></rect>
+      <linearGradient id="l1" x1="0" y1="0" x2="0" y2="1">
+        <stop stop-color="white" offset="0%" />
+        <stop stop-color="black" offset="30%" />
+        <stop stop-color="white" offset="100%" />
+      </linearGradient>
+    </mask>
+    <filter id="filtre2">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+    </filter>
+  </defs>
+</svg>
