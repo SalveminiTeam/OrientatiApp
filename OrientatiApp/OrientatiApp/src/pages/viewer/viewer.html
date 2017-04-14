@@ -7,6 +7,11 @@
     </ion-buttons>
     <ion-title>{{title}}</ion-title>
     <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="toggleRotation()">
+        <ion-icon name="sync"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
       <button ion-button icon-only color="light" (click)="toggleMode()">
         <ion-icon name="compass"></ion-icon>
       </button>

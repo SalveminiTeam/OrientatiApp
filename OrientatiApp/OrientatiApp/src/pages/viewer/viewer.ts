@@ -44,4 +44,8 @@ export class Viewer implements AfterViewInit {
       this.navCtrl.pop({ animation: 'md-transition' });
   }
 
+  private toggleRotation() {
+      this.Viewer360.toggleRotation();
+  }
+
 }
