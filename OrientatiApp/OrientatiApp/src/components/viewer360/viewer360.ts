@@ -40,7 +40,7 @@ export class Viewer360Component {
         this.controls.enablePan = false;
         this.controls.autoRotate = true;
 
-        var textures = this.getTexturesFromAtlasFile("../../assets/360photos/" + imagePath + ".png", 6);
+        var textures = this.getTexturesFromAtlasFile("assets/360photos/" + imagePath + ".png", 6);
 
         var materials = [];
 
