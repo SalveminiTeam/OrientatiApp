@@ -36,16 +36,27 @@ export class Viewer implements AfterViewInit {
       }
   }
 
-  private toggleMode() {
+  toggleMode() {
       this.Viewer360.toggleControls();
   }
 
-  private back() {
+  back() {
       this.navCtrl.pop({ animation: 'md-transition' });
   }
 
-  private toggleRotation() {
+  toggleRotation() {
       this.Viewer360.toggleRotation();
   }
+
+  panEvent(e) {
+
+      if (this.Viewer360.isNormal()) {
+          if (this.Viewer360.isRotating()) {
+              this.Viewer360.toggleRotation();
+          }
+      }
+  }
+
+  
 
 }
