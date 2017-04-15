@@ -8,30 +8,10 @@
 
 <ion-content class="card-background-page">
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-
+  <button ion-button (click)="getData()"></button>
   <ion-list>
-      <ion-card>
-        <img src="assets/img/test/lim.png"/>
-        <div class="card-title">Aule</div>
-        <div class="card-subtitle">41 Listings</div>
-      </ion-card>
-
-      <ion-card>
-        <img src="assets/img/test/auditorium.png"/>
-        <div class="card-title">Sale Conferenza</div>
-        <div class="card-subtitle">64 Listings</div>
-      </ion-card>
-
-      <ion-card>
-        <img src="assets/img/test/lab1.png"/>
-        <div class="card-title">Laboratori</div>
-        <div class="card-subtitle">72 Listings</div>
-      </ion-card>
-
-      <ion-card>
-        <img src="assets/img/test/pingpong.png"/>
-        <div class="card-title">Servizi e Sport</div>
-        <div class="card-subtitle">28 Listings</div>
-      </ion-card>
+    <!--<ion-item *ngFor="let item of items">
+      <img-card [title]="item.titolo" [subtitle]="item.sottotitolo" [image]="item.foto"></img-card>
+    </ion-item>-->
   </ion-list>
 </ion-content>

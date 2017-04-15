@@ -1,28 +1,38 @@
 ﻿import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'page-cerca',
   templateUrl: 'cerca.html'
 })
+
 export class CercaPage {
 
-  constructor(public navCtrl: NavController) {
+    rooms;
+    items = [];
 
-  }
+    constructor(public navCtrl: NavController, public http: Http) {
+        this.rooms = this.http.get('data/data.json'); subscribe(rooms => {
+            this.rooms = rooms;
+        }); 
+        console.log(this.rooms);
+        this.initializeItems();
+    }
 
-  getItems(ev) {
-      //this.initializeItems();
 
-      // set val to the value of the ev target
-      /*var val = ev.target.value;
+    initializeItems() {
+        for (let element of this.rooms) {
+            this.items.push(element);
+        }
+        console.log(this.items);
+    }
 
-      // if the value is an empty string don't filter the items
-      if (val && val.trim() != '') {
-          this.items = this.items.filter((item) => {
-              return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
-          })
-      }*/
-  }
+
+
+    getItems(ev) {
+
+    }
 
 }
