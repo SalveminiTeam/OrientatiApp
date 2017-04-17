@@ -139,11 +139,11 @@ export class Viewer360Component {
     }
 
     render() {
-
-        this.controls.update();
-
-        this.renderer.render(this.scene, this.camera);
-        if (this.animating) { requestAnimationFrame(() => { this.render() }); };
+        if (this.animating) {
+            this.controls.update();
+            this.renderer.render(this.scene, this.camera)
+            requestAnimationFrame(() => { this.render() });
+        }
     }
 
 

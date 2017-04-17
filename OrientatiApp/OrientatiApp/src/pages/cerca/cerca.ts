@@ -1,7 +1,25 @@
 ﻿import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+
+import { DettagliPage } from '../dettagli/dettagli'
+
+interface IRoom {
+    "nome": string;
+    "categoria": string;
+    "descrizione": string;
+    "piano": number;
+    "foto": string;
+    "360photo": string;
+}
+
+interface ICategory {
+    "nome": string;
+    "foto": string;
+    "sottotitolo": string;
+}
 
 @Component({
   selector: 'page-cerca',
@@ -10,29 +28,63 @@ import 'rxjs/add/operator/map';
 
 export class CercaPage {
 
-    rooms;
+    cat: ICategory[] = [];
+    rooms: IRoom[] = [];
     items = [];
+    searchQuery: string = "";
+
 
     constructor(public navCtrl: NavController, public http: Http) {
-        this.rooms = this.http.get('data/data.json'); subscribe(rooms => {
-            this.rooms = rooms;
+        this.http.get('data/data.json').map((res: Response) => res.json()).subscribe(data => {
+            this.rooms = data.stanze;
+            this.cat = data.categorie;
+
+            this.getItems(null);
+
+
+            console.log(this.rooms);
         }); 
-        console.log(this.rooms);
-        this.initializeItems();
     }
 
+    ionViewWillEnter() {
+        this.searchQuery = "";
 
-    initializeItems() {
-        for (let element of this.rooms) {
-            this.items.push(element);
-        }
-        console.log(this.items);
     }
-
 
 
     getItems(ev) {
 
+        let pos: number = -1;
+        let field: string;
+        let query: string;
+        let search: string = this.searchQuery.toLowerCase();
+
+        pos = search.indexOf(":");
+
+        if (pos >= 0) {
+            field = search.substr(0, pos);
+        } else {
+            field = "nome";
+        }
+
+        query = search.substring(pos+1);
+
+        this.items = this.rooms.filter((value) => {
+            let found = false;
+            if (value[field])
+                found = value[field].toString().toLowerCase().includes(query);
+
+            return found;
+        });
+    }
+
+    enterCat(item: ICategory) {
+        this.searchQuery = "categoria:" + item.nome;
+        this.getItems(null);
+    }
+
+    enterRoom(room: IRoom) {
+        this.navCtrl.push(DettagliPage);
     }
 
 }

@@ -10,7 +10,7 @@ import { MappaPage } from '../pages/mappa/mappa';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Viewer } from '../pages/viewer/viewer';
 import { Viewer360Component } from '../components/viewer360/viewer360';
-import { ImageCardComponent } from '../components/ImageCard/ImageCard';
+import { DettagliPage } from '../pages/dettagli/dettagli';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,7 +24,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     Viewer,
     Viewer360Component,
-    ImageCardComponent
+    DettagliPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +40,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     Viewer,
     Viewer360Component,
-    ImageCardComponent
+    DettagliPage
   ],
   providers: [
     StatusBar,

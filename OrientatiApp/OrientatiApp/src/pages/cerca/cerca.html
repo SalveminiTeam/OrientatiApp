@@ -1,17 +1,25 @@
 ﻿<ion-header>
   <ion-navbar color="toolbar">
-    <ion-title>
-      Cerca
-    </ion-title>
+    <ion-searchbar type="search" [(ngModel)]="searchQuery" (ionInput)="getItems($event)"></ion-searchbar> 
   </ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page">
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-  <button ion-button (click)="getData()"></button>
-  <ion-list>
-    <!--<ion-item *ngFor="let item of items">
-      <img-card [title]="item.titolo" [subtitle]="item.sottotitolo" [image]="item.foto"></img-card>
-    </ion-item>-->
+
+  
+  <ion-list *ngIf="searchQuery==''">
+    <ion-card *ngFor="let item of cat" (click)="enterCat(item)">
+      <img [src]="item.foto" />
+      <div class="card-title">{{item.nome}}</div>
+      <div class="card-subtitle"></div>
+    </ion-card>
+  </ion-list>
+  
+  <ion-list *ngIf="searchQuery!=''">
+      <ion-card *ngFor="let item of items" (click)="enterRoom(item)">
+        <img [src]="item.foto" />
+        <div class="card-title">{{item.nome}}</div>
+        <div class="card-subtitle"></div>
+      </ion-card>
   </ion-list>
 </ion-content>
