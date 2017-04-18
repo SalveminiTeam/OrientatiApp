@@ -1,5 +1,5 @@
 ﻿import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -34,7 +34,7 @@ export class CercaPage {
     searchQuery: string = "";
 
 
-    constructor(public navCtrl: NavController, public http: Http) {
+    constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController) {
         this.http.get('data/data.json').map((res: Response) => res.json()).subscribe(data => {
             this.rooms = data.stanze;
             this.cat = data.categorie;
@@ -84,7 +84,8 @@ export class CercaPage {
     }
 
     enterRoom(room: IRoom) {
-        this.navCtrl.push(DettagliPage);
+        let profileModal = this.modalCtrl.create(DettagliPage);
+        profileModal.present();
     }
 
 }

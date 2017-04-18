@@ -1,5 +1,5 @@
 ﻿import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 
 import { Viewer } from '../viewer/viewer'
 
@@ -9,12 +9,13 @@ import { Viewer } from '../viewer/viewer'
 })
 export class UtilityPage {
 
-  constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
-  }
+    }
 
   show360(img: string, ttl: string) {
-      this.navCtrl.push(Viewer, { image: img, title: ttl }, { animation: 'md-transition' })
+      let profileModal = this.modalCtrl.create(Viewer, { image: img, title: ttl } );
+      profileModal.present();
   }
 
 }

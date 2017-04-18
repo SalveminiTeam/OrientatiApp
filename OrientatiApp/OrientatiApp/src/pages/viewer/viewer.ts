@@ -18,16 +18,13 @@ export class Viewer implements AfterViewInit {
   constructor(public navCtrl: NavController, public params: NavParams) {
       this.image = params.get("image");
       this.title = params.get("title");
-      this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
   }
 
   ionViewWillEnter() {
-      this.tabBarElement.style.display = 'none';
       this.Viewer360.startAnimation();
   }
 
   ionViewWillLeave() {
-      this.tabBarElement.style.display = 'flex';
       this.Viewer360.stopAnimation();
   }
 
@@ -42,7 +39,7 @@ export class Viewer implements AfterViewInit {
   }
 
   back() {
-      this.navCtrl.pop({ animation: 'md-transition' });
+      this.navCtrl.pop();
   }
 
   toggleRotation() {

@@ -1,6 +1,11 @@
 ﻿<ion-header>
 
-  <ion-navbar style="height:100px;" color="toolbar">
+  <ion-navbar color="toolbar">
+    <ion-buttons left class="back">
+      <button ion-button icon-only color="light" (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>{{nome}}</ion-title>
   </ion-navbar>
 
@@ -11,4 +16,9 @@
 <ion-content padding>
   <h3>Descrizione</h3>
   <p>{{descrizione}}</p>
+  <h3>Foto 360°</h3>
+  <ion-card>
+    <img src="assets/360photos/banner/aulaNewton.jpg" />
+    <div class="card-subtitle">Panorama {{nome}}</div>
+  </ion-card>
 </ion-content>
