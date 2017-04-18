@@ -1,7 +1,6 @@
 ﻿import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { Viewer } from '../viewer/viewer'
 
 @Component({
   selector: 'page-mappa',
@@ -9,12 +8,37 @@ import { Viewer } from '../viewer/viewer'
 })
 export class MappaPage {
 
-  constructor(public navCtrl: NavController) {
+    zoom: number = 1;
+    zoomMax: number = 2.5;
+    zoomMin: number = 0.7;
+    zoomStep: number = 0.5;
 
+  constructor(public navCtrl: NavController) {
   }
 
-  show360(img: string, ttl: string) {
-      this.navCtrl.push(Viewer, { image: img, title: ttl }, { animation: 'md-transition' } )
+
+  zoomIn() {
+
+      let tempZoom: number;
+
+      tempZoom = this.zoom + this.zoomStep;
+
+      if (tempZoom <= this.zoomMax)
+          this.zoom = this.zoom + this.zoomStep;
+      else
+          this.zoom = this.zoomMax;
+  }
+
+  zoomOut() {
+
+      let tempZoom: number;
+
+      tempZoom = this.zoom - this.zoomStep;
+
+      if (tempZoom >= this.zoomMin)
+          this.zoom = this.zoom - this.zoomStep;
+      else
+          this.zoom = this.zoomMin;
   }
 
 }

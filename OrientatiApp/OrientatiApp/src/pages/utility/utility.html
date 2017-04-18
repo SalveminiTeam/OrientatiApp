@@ -8,10 +8,12 @@
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
+    <button ion-button block (click)="show360('aulaNewton', 'Aula Newton')">Panorama Newton</button>
+    <button ion-button block (click)="show360('biblioteca', 'Biblioteca')">Panorama Biblioteca</button>
+    <button ion-button block (click)="show360('aulaDiFisica', 'Aula di Fisica')">Panorama Aula di Fisica</button>
+    <button ion-button block (click)="show360('aulaVitulli', 'Aula Vitulli')">Panorama Aula Vitulli</button>
+    <button ion-button block (click)="show360('corridoioPalestra', 'Corridoio Palestra')">Panorama Corridoio Palestra</button>
+    <button ion-button block (click)="show360('salaPingPong', 'Sala Ping-Pong')">Panorama Sala Ping-Pong</button>
+    <button ion-button block (click)="show360('saletta', 'Saletta')">Panorama Saletta</button>
   </ion-list>
 </ion-content>
