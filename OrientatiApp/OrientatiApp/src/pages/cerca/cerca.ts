@@ -12,7 +12,7 @@ interface IRoom {
     "descrizione": string;
     "piano": number;
     "foto": string;
-    "360photo": string;
+    "photo360": string;
 }
 
 interface ICategory {
@@ -84,7 +84,7 @@ export class CercaPage {
     }
 
     enterRoom(room: IRoom) {
-        let profileModal = this.modalCtrl.create(DettagliPage);
+        let profileModal = this.modalCtrl.create(DettagliPage, { title: room.nome, description: room.descrizione, bannerImage: "assets/360photos/banner/" + room.photo360 + ".jpg", photo360: room.photo360 });
         profileModal.present();
     }
 

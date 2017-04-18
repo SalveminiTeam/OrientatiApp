@@ -6,7 +6,7 @@
         <ion-icon name="arrow-back"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>{{nome}}</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,8 +17,8 @@
   <h3>Descrizione</h3>
   <p>{{descrizione}}</p>
   <h3>Foto 360°</h3>
-  <ion-card>
-    <img src="assets/360photos/banner/aulaNewton.jpg" />
-    <div class="card-subtitle">Panorama {{nome}}</div>
+  <ion-card (tap)="show360()">
+    <img src="{{bannerImage}}" />
+    <div class="card-subtitle">Panorama {{title}}</div>
   </ion-card>
 </ion-content>
