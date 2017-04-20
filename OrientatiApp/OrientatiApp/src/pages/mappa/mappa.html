@@ -7,7 +7,7 @@
 <ion-content >
   <ion-scroll scrollX="true" scrollY="true" zoom="true">
     <ion-row>
-      <img [ngStyle]="{'zoom': zoom}" src="assets/maps/P1.png" />
+      <img [ngStyle]="{'zoom': zoom}" src="assets/maps/P1.png" class="mapImg"/>
     </ion-row>
     <ion-row class="dwnDutton">
       <ion-row><button ion-button icon-only (tap)="zoomIn()" color="dark"> <ion-icon name="add"></ion-icon> </button> </ion-row>
@@ -16,10 +16,9 @@
     <ion-fab left bottom>
       <button ion-fab color="dark"><ion-icon name="reorder"></ion-icon></button>
       <ion-fab-list side="right">
-        <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
-        <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+        <button ion-fab><img class="fabImg" src="../../assets/logos/Icon-floor-first.png" /></button>
+        <button ion-fab><img class="fabImg" src="../../assets/logos/Icon-floor-ground.png" /></button>
+        <button ion-fab><img class="fabImg" src="../../assets/logos/Icon-floor-second.png" />></button>
       </ion-fab-list>
     </ion-fab>
   </ion-scroll>
