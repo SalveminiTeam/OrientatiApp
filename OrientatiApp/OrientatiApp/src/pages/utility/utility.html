@@ -1,19 +1,22 @@
 ﻿<ion-header>
   <ion-navbar color="toolbar">
-    <ion-title>
-      Utility
-    </ion-title>
+    <ion-searchbar type="search" [(ngModel)]="searchQuery" (ionInput)="getItems($event)"></ion-searchbar> 
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
   <ion-list>
-    <button ion-button block (click)="show360('aulaNewton', 'Aula Newton')">Panorama Newton</button>
-    <button ion-button block (click)="show360('biblioteca', 'Biblioteca')">Panorama Biblioteca</button>
-    <button ion-button block (click)="show360('aulaDiFisica', 'Aula di Fisica')">Panorama Aula di Fisica</button>
-    <button ion-button block (click)="show360('aulaVitulli', 'Aula Vitulli')">Panorama Aula Vitulli</button>
-    <button ion-button block (click)="show360('corridoioPalestra', 'Corridoio Palestra')">Panorama Corridoio Palestra</button>
-    <button ion-button block (click)="show360('salaPingPong', 'Sala Ping-Pong')">Panorama Sala Ping-Pong</button>
-    <button ion-button block (click)="show360('saletta', 'Saletta')">Panorama Saletta</button>
+    <ion-item-divider> Bibite </ion-item-divider>
+    <ion-item> *ngFor="let food of foods" >
+      <ion-row class="list-item">
+        <div class="add-remove-btn">
+          <button ion-button icon-only no-space clear color="secondary"><ion-icon name="add-circle"></ion-icon></button>
+          <button ion-button icon-only no-space clear color="danger"><ion-icon name="remove-circle"></ion-icon></button>
+        </div>
+        <h2>{{food.name}}</h2>
+        <h2>{{food.price}}</h2>
+      </ion-row>
+    </ion-item>
+
   </ion-list>
 </ion-content>
