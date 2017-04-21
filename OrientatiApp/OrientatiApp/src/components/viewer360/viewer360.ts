@@ -13,6 +13,7 @@ export class Viewer360Component {
     renderer;
     scene;
     manager;
+    animating: boolean;
 
     @ViewChild("container") container: ElementRef;
 
@@ -38,8 +39,9 @@ export class Viewer360Component {
         this.controls = new THREE.OrbitControls(this.camera);
         this.controls.enableZoom = false;
         this.controls.enablePan = false;
+        this.controls.autoRotate = true;
 
-        var textures = this.getTexturesFromAtlasFile("../../assets/360photos/" + imagePath + ".png", 6);
+        var textures = this.getTexturesFromAtlasFile("assets/360photos/" + imagePath + ".png", 6);
 
         var materials = [];
 
@@ -97,13 +99,53 @@ export class Viewer360Component {
         return textures;
     }
 
-    public animate() {
+    public toggleControls() {
 
-        this.controls.update();
+        if (this.controls instanceof THREE.OrbitControls) {
+            this.controls = new THREE.DeviceOrientationControls(this.camera);
+        } else {
+            this.controls = new THREE.OrbitControls(this.camera);
+            this.controls.reset();
+            this.controls.enableZoom = false;
+            this.controls.enablePan = false;
+        }
 
-        this.renderer.render(this.scene, this.camera);
-
-        requestAnimationFrame(() => { this.animate() });
     }
+
+    public toggleRotation() {
+        if (this.controls.autoRotate == true) { this.controls.autoRotate = false; }
+        else if (this.controls.autoRotate == false) { this.controls.autoRotate = true; } 
+    }
+
+    public isNormal() {
+        return this.controls instanceof THREE.OrbitControls;
+    }
+
+    public isRotating() {
+        return this.controls.autoRotate;
+    }
+
+
+    startAnimation() {
+        /*let width = this.Viewer360Element.nativeElement.childNodes[0].clientWidth;
+        let height = this.Viewer360Element.nativeElement.childNodes[0].clientHeight;
+        this.renderer.setSize(width, height);*/
+        this.animating = true;
+        this.render();
+    }
+
+    stopAnimation() {
+        this.animating = false;
+    }
+
+    render() {
+        if (this.animating) {
+            this.controls.update();
+            this.renderer.render(this.scene, this.camera)
+            requestAnimationFrame(() => { this.render() });
+        }
+    }
+
+
 }
 

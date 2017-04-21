@@ -1,0 +1,124 @@
+﻿{
+  "rooms": [
+    {
+      "nome": "Auditorium",
+      "categoria": "Sala conferenza",
+      "descrizione": "",
+      "piano": 0,
+      "foto": "assets/img/photos/auditorium.png",
+      "360photo": "" 
+    },
+    {
+      "nome": "Aula Newton",
+      "categoria": "Sala conferenza",
+      "descrizione": "",
+      "piano": 0,
+      "foto": "assets/img/photos/", 
+      "360photo": "aulaNewton"
+    },
+    {
+      "nome": "Aula Vitulli",
+      "categoria": "Sala conferenza",
+      "descrizione": "",
+      "piano": 0,
+      "foto": "assets/img/photos/", 
+      "360photo": "aulaVitulli"
+    },
+    {
+      "nome": "Palestra Interna",
+      "categoria": "Servizi e Sport",
+      "descrizione": "",
+      "piano": 0,
+      "foto": "assets/img/photos/palint.png",
+      "360photo": "" 
+    },
+    {
+      "nome": "Palestra Esterna",
+      "categoria": "Servizi e Sport",
+      "descrizione": "",
+      "piano": 0,
+      "foto": "assets/img/photos/palest.png",
+      "360photo": "" 
+    },
+    {
+      "nome": "Bar",
+      "categoria": "Servizi e Sport",
+      "descrizione": "",
+      "piano": 0,
+      "foto": "assets/img/photos/bar.png",
+      "360photo": "" 
+    },
+    {
+      "nome": "Sala PingPong",
+      "categoria": "Servizi e Sport",
+      "descrizione": "",
+      "piano": 0,
+      "foto": "assets/img/photos/pingpong.png",
+      "360photo": "salaPingPong"
+    },
+    {
+      "nome": "Saletta",
+      "categoria": "Servizi e Sport",
+      "descrizione": "",
+      "piano": 0,
+      "foto": "assets/img/photos/fitness.png",
+      "360photo": "saletta"
+    },
+    {
+      "nome": "Corridoio Palestra",
+      "categoria": "Servizi e Sport",
+      "descrizione": "",
+      "piano": 0,
+      "foto": "assets/img/photos/", 
+      "360photo": "corridoioPalestra"
+    },
+    {
+      "nome": "Aula di Fisica",
+      "categoria": "Laboratori",
+      "descrizione": "",
+      "piano": 1,
+      "foto": "assets/img/photos/lab3.png",
+      "360photo": "aulaDiFisica"
+    },
+    {
+      "nome": "Math lab",
+      "categoria": "Laboratori",
+      "descrizione": "",
+      "piano": 1,
+      "foto": "assets/img/photos/lab1.png",
+      "360photo": "" 
+    },
+    {
+      "nome": "Laboratorio di Chimica",
+      "categoria": "Laboratori",
+      "descrizione": "",
+      "piano": 2,
+      "foto": "assets/img/photos/lab2.png",
+      "360photo": "" 
+    },
+    {
+      "nome": "Corso Tradizionale",
+      "categoria": "Corsi",
+      "descrizione": "",
+      "piano": null,
+      "foto": "assets/img/photos/", 
+      "360photo": "" 
+    },
+    {
+      "nome": "Corso Tablet",
+      "categoria": "Corsi",
+      "descrizione": "",
+      "piano": null,
+      "foto": "assets/img/photos/", 
+      "360photo": "" 
+    },
+    {
+      "nome": "Corso Cambrige",
+      "categoria": "Corsi",
+      "descrizione": "",
+      "piano": null,
+      "foto": "assets/img/photos/", 
+      "360photo": "" 
+    }
+  ]
+}

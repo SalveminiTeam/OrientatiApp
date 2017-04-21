@@ -18,22 +18,43 @@ export class Viewer implements AfterViewInit {
   constructor(public navCtrl: NavController, public params: NavParams) {
       this.image = params.get("image");
       this.title = params.get("title");
-      this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
   }
 
   ionViewWillEnter() {
-      this.tabBarElement.style.display = 'none';
+      this.Viewer360.startAnimation();
   }
 
   ionViewWillLeave() {
-      this.tabBarElement.style.display = 'flex';
+      this.Viewer360.stopAnimation();
   }
 
   ngAfterViewInit() {
       if (this.Viewer360) {
           this.Viewer360.Init(this.image);
-          this.Viewer360.animate();
       }
   }
+
+  toggleMode() {
+      this.Viewer360.toggleControls();
+  }
+
+  back() {
+      this.navCtrl.pop();
+  }
+
+  toggleRotation() {
+      this.Viewer360.toggleRotation();
+  }
+
+  panEvent(e) {
+
+      if (this.Viewer360.isNormal()) {
+          if (this.Viewer360.isRotating()) {
+              this.Viewer360.toggleRotation();
+          }
+      }
+  }
+
+  
 
 }

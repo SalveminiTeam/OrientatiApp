@@ -1,0 +1,24 @@
+﻿<ion-header>
+
+  <ion-navbar color="toolbar">
+    <ion-buttons left class="back">
+      <button ion-button icon-only color="light" (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+  <h3>Descrizione</h3>
+  <p>{{descrizione}}</p>
+  <h3>Foto 360°</h3>
+  <ion-card (tap)="show360()">
+    <img src="{{bannerImage}}" />
+    <div class="card-subtitle">Panorama {{title}}</div>
+  </ion-card>
+</ion-content>

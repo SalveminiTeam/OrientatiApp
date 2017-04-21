@@ -1,0 +1,42 @@
+﻿@import "./ionic.globals";
+
+
+// Default Theme
+// ----------------------------------
+
+$colors: (
+
+  primary:    #327eff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+
+) !default;
+
+
+$text-color:                 #000 !default;                                   //colore del testo in generale (paragrafi, titoli, etc.)                      
+$link-color:                 color($colors, primary) !default;                //colore dei link (questo lo cambi da variables.scss, dai colori => primary)
+$background-color:           #fff !default;                                   //colore di sfondo di ogni pagina
+$subdued-text-color:         #666 !default;                                   //non ne ho idea XD
+
+$font-family-base:           -apple-system, "Helvetica Neue", "Roboto", sans-serif !default;
+$font-size-base:             1.4rem !default; // 1.4rem == 14px               //grandezza del font in relazione al quale si definiscono le grandezze di tutti i font
+
+$content-padding:            16px !default;                                   //padding(distanza, spostamento) del contenuto dai bordi
+$content-margin:             16px !default;                                   //margine del contenuto dai bordi
+
+$toolbar-background:         #f8f8f8 !default;                                //colore dello sfondo della toolbar (la fascia di sopra)
+$toolbar-border-color:       #b2b2b2 !default;                                //colore del bordo "credo l'ombra"... forse della toolbar
+$toolbar-text-color:         $text-color !default;                            //colore del testo della toolbar (di default è lo stesso colore del testo normale)
+$toolbar-active-color:       $link-color !default;                            //colore dei bottoni della toolbar quando selezionati
+$toolbar-inactive-color:     #8c8c8c !default;                                //colore degli stessi bottoni, inattivi
+
+$tabs-background:            #f8f8f8 !default;                                //colore dello sfondo dei tabs
+$tabs-border-color:          #b2b2b2 !default;                                //colore del bordo dei tabs
+$tabs-tab-color-inactive:    #8c8c8c !default;                                //colore dei bottoni dei tabs attivi
+$tabs-tab-color-active:      $link-color !default;                            //colore dei bottoni dei tabs inattivi
+
+$list-text-color:            $text-color !default;                            //colore del testo degli elementi della lista
+$list-background-color:      $background-color !default;                      //colore dello sfondo della lista
+$list-border-color:          #c8c7cc !default;                                //colore del bordo della lista
