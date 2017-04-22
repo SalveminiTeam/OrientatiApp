@@ -1,0 +1,49 @@
+﻿{
+  "categorie": [
+    {
+      "nome": "Bibite",
+      "cibo": [
+        {
+          "nome": "Acqua",
+          "prezzo": 0.50,
+          "quantità": 100
+        },
+        {
+          "nome": "Cocacola",
+          "prezzo": 0.80,
+          "quantità": 80
+        }
+      ]
+    },
+    {
+      "nome": "Salato",
+      "cibo": [
+        {
+          "nome": "Focaccina",
+          "prezzo": 0.90,
+          "quantità": 50
+        }
+      ]
+    },
+    {
+      "nome": "Dolce",
+      "cibo": [
+        {
+          "nome": "Cornetto (crema)",
+          "prezzo": 0.90,
+          "quantità": 50
+        }
+      ]
+    },
+    {
+      "nome": "Altro",
+      "cibo": [
+        {
+          "nome": "Goleador",
+          "prezzo": 0.10,
+          "quantità": 200
+        }
+      ]
+    }
+  ]
+}

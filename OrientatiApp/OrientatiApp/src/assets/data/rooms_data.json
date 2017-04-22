@@ -1,28 +1,50 @@
 ﻿{
-  "rooms": [
+  "categorie": [
+    {
+      "nome": "Sale Conferenza",
+      "foto": "assets/img/photos/auditorium.png",
+      "sottotitolo": ""
+    },
+    {
+      "nome": "Servizi e Sport",
+      "foto": "assets/img/photos/palint.png",
+      "sottotitolo": ""
+    },
+    {
+      "nome": "Laboratori",
+      "foto": "assets/img/photos/lab2.png",
+      "sottotitolo": ""
+    },
+    {
+      "nome": "Corsi",
+      "foto": "assets/img/photos/lim.png",
+      "sottotitolo": ""
+    }
+  ],
+  "stanze": [
     {
       "nome": "Auditorium",
-      "categoria": "Sala conferenza",
+      "categoria": "Sale conferenza",
       "descrizione": "",
       "piano": 0,
       "foto": "assets/img/photos/auditorium.png",
-      "360photo": "" 
+      "photo360": ""
     },
     {
       "nome": "Aula Newton",
-      "categoria": "Sala conferenza",
+      "categoria": "Sale conferenza",
       "descrizione": "",
       "piano": 0,
-      "foto": "assets/img/photos/", 
-      "360photo": "aulaNewton"
+      "foto": "assets/img/photos/",
+      "photo360": "aulaNewton"
     },
     {
       "nome": "Aula Vitulli",
-      "categoria": "Sala conferenza",
+      "categoria": "Sale conferenza",
       "descrizione": "",
       "piano": 0,
-      "foto": "assets/img/photos/", 
-      "360photo": "aulaVitulli"
+      "foto": "assets/img/photos/",
+      "photo360": "aulaVitulli"
     },
     {
       "nome": "Palestra Interna",
@@ -30,7 +52,7 @@
       "descrizione": "",
       "piano": 0,
       "foto": "assets/img/photos/palint.png",
-      "360photo": "" 
+      "photo360": ""
     },
     {
       "nome": "Palestra Esterna",
@@ -38,7 +60,7 @@
       "descrizione": "",
       "piano": 0,
       "foto": "assets/img/photos/palest.png",
-      "360photo": "" 
+      "photo360": ""
     },
     {
       "nome": "Bar",
@@ -46,7 +68,7 @@
       "descrizione": "",
       "piano": 0,
       "foto": "assets/img/photos/bar.png",
-      "360photo": "" 
+      "photo360": ""
     },
     {
       "nome": "Sala PingPong",
@@ -54,7 +76,7 @@
       "descrizione": "",
       "piano": 0,
       "foto": "assets/img/photos/pingpong.png",
-      "360photo": "salaPingPong"
+      "photo360": "salaPingPong"
     },
     {
       "nome": "Saletta",
@@ -62,15 +84,15 @@
       "descrizione": "",
       "piano": 0,
       "foto": "assets/img/photos/fitness.png",
-      "360photo": "saletta"
+      "photo360": "saletta"
     },
     {
       "nome": "Corridoio Palestra",
       "categoria": "Servizi e Sport",
       "descrizione": "",
       "piano": 0,
-      "foto": "assets/img/photos/", 
-      "360photo": "corridoioPalestra"
+      "foto": "assets/img/photos/",
+      "photo360": "corridoioPalestra"
     },
     {
       "nome": "Aula di Fisica",
@@ -78,7 +100,7 @@
       "descrizione": "",
       "piano": 1,
       "foto": "assets/img/photos/lab3.png",
-      "360photo": "aulaDiFisica"
+      "photo360": "aulaDiFisica"
     },
     {
       "nome": "Math lab",
@@ -86,7 +108,7 @@
       "descrizione": "",
       "piano": 1,
       "foto": "assets/img/photos/lab1.png",
-      "360photo": "" 
+      "photo360": ""
     },
     {
       "nome": "Laboratorio di Chimica",
@@ -94,31 +116,47 @@
       "descrizione": "",
       "piano": 2,
       "foto": "assets/img/photos/lab2.png",
-      "360photo": "" 
+      "photo360": ""
+    },
+    {
+      "nome": "Laboratorio Linguistico",
+      "categoria": "Laboratori",
+      "descrizione": "",
+      "piano": 2,
+      "foto": "assets/img/photos/lab1.png",
+      "photo360": ""
     },
     {
       "nome": "Corso Tradizionale",
       "categoria": "Corsi",
       "descrizione": "",
       "piano": null,
-      "foto": "assets/img/photos/", 
-      "360photo": "" 
+      "foto": "assets/img/photos/",
+      "photo360": ""
     },
     {
       "nome": "Corso Tablet",
       "categoria": "Corsi",
       "descrizione": "",
       "piano": null,
-      "foto": "assets/img/photos/", 
-      "360photo": "" 
+      "foto": "assets/img/photos/lim.png",
+      "photo360": ""
     },
     {
       "nome": "Corso Cambrige",
       "categoria": "Corsi",
       "descrizione": "",
       "piano": null,
-      "foto": "assets/img/photos/", 
-      "360photo": "" 
+      "foto": "assets/img/photos/",
+      "photo360": ""
+    },
+    {
+      "nome": "Corso Sportivo",
+      "categoria": "Corsi",
+      "descrizione": "",
+      "piano": null,
+      "foto": "assets/img/photos/",
+      "photo360": ""
     }
   ]
 }

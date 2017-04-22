@@ -35,7 +35,7 @@ export class CercaPage {
 
 
     constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController) {
-        this.http.get('data/data.json').map((res: Response) => res.json()).subscribe(data => {
+        this.http.get('assets/data/rooms_data.json').map((res: Response) => res.json()).subscribe(data => {
             this.rooms = data.stanze;
             this.cat = data.categorie;
 

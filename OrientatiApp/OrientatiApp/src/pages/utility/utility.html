@@ -6,17 +6,18 @@
 
 <ion-content >
   <ion-list>
-    <ion-item-divider> Bibite </ion-item-divider>
-    <ion-item> *ngFor="let food of foods" >
-      <ion-row class="list-item">
-        <div class="add-remove-btn">
-          <button ion-button icon-only no-space clear color="secondary"><ion-icon name="add-circle"></ion-icon></button>
-          <button ion-button icon-only no-space clear color="danger"><ion-icon name="remove-circle"></ion-icon></button>
-        </div>
-        <h2>{{food.name}}</h2>
-        <h2>{{food.price}}</h2>
-      </ion-row>
-    </ion-item>
-
+    <div *ngFor="let cat of items">
+      <ion-item-divider color="light" *ngIf="cat.cibo[0] != null" >{{cat.nome}}</ion-item-divider>
+      <ion-item no-padding *ngFor="let food of cat['cibo']">
+        <ion-row class="list-item">
+          <div class="add-remove-btn">
+            <button ion-button icon-only no-space clear color="secondary"><ion-icon name="add-circle"></ion-icon></button>
+            <button ion-button icon-only no-space clear color="danger"><ion-icon name="remove-circle"></ion-icon></button>
+          </div>
+          <h2>{{food.nome}}</h2>
+          <h2>€ {{food.prezzo.toPrecision(2)}}</h2>
+        </ion-row>
+      </ion-item>
+    </div>
   </ion-list>
 </ion-content>

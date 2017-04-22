@@ -12,4 +12,16 @@
   .button[icon-only][no-space] {
     max-width: 30px;
   }
+
+  .label-md, .label-ios {
+    margin: 2px 2px 2px 0;
+  }
+
+  .ion-item[no-padding] {
+    padding-left: 0px;
+  }
+
+  .list-md .item-block .item-inner, .list-ios .item-block .item-inner {
+    padding-left: 10px;
+  }
 }
