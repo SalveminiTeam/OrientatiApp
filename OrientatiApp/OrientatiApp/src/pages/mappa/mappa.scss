@@ -26,10 +26,10 @@
   }
 
   .dwnDutton {
-    position: fixed;
+    position: absolute;
     align-self: flex-end;
     right: 5px;
-    bottom: 56px;
+    bottom: 5px;
   }
 
   .fabImg {
@@ -39,7 +39,7 @@
   }
 
   .fab-in-list {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
 }

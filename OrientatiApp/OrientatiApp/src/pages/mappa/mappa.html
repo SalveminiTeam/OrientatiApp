@@ -10,8 +10,8 @@
       <img [ngStyle]="{'zoom': zoom}" src="assets/maps/P1.png" class="mapImg"/>
     </ion-row>
     <ion-row class="dwnDutton">
-      <ion-row><button ion-button icon-only (tap)="zoomIn()" color="dark"> <ion-icon name="add"></ion-icon> </button> </ion-row>
-      <ion-row><button ion-button icon-only (tap)="zoomOut()" color="dark"> <ion-icon name="remove"></ion-icon> </button> </ion-row>
+      <ion-row><button ion-button icon-only (click)="zoomIn()" color="dark"> <ion-icon name="add"></ion-icon> </button> </ion-row>
+      <ion-row><button ion-button icon-only (click)="zoomOut()" color="dark"> <ion-icon name="remove"></ion-icon> </button> </ion-row>
     </ion-row>
     <ion-fab left bottom>
       <button ion-fab color="dark"><ion-icon name="reorder"></ion-icon></button>

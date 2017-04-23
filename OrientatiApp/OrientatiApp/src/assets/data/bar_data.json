@@ -6,12 +6,22 @@
         {
           "nome": "Acqua",
           "prezzo": 0.50,
-          "quantità": 100
+          "quantita": 100
         },
         {
           "nome": "Cocacola",
           "prezzo": 0.80,
-          "quantità": 80
+          "quantita": 80
+        },
+        {
+          "nome": "Succo alla pera",
+          "prezzo": 0.80,
+          "quantita": 50
+        },
+        {
+          "nome": "Succo alla pesca",
+          "prezzo": 0.80,
+          "quantita": 50
         }
       ]
     },
@@ -21,7 +31,22 @@
         {
           "nome": "Focaccina",
           "prezzo": 0.90,
-          "quantità": 50
+          "quantita": 50
+        },
+        {
+          "nome": "Panzerotto",
+          "prezzo": 2.00,
+          "quantita": 20
+        },
+        {
+          "nome": "Panino (cotoletta)",
+          "prezzo": 2.00,
+          "quantita": 20
+        },
+        {
+          "nome": "Paninio (prosciutto)",
+          "prezzo": 2.00,
+          "quantita": 20
         }
       ]
     },
@@ -31,7 +56,12 @@
         {
           "nome": "Cornetto (crema)",
           "prezzo": 0.90,
-          "quantità": 50
+          "quantita": 50
+        },
+        {
+          "nome": "Cornetto (nutella)",
+          "prezzo": 0.90,
+          "quantita": 50
         }
       ]
     },
@@ -41,7 +71,7 @@
         {
           "nome": "Goleador",
           "prezzo": 0.10,
-          "quantità": 200
+          "quantita": 200
         }
       ]
     }

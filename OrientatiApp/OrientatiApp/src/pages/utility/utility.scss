@@ -3,6 +3,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    p {
+      left: 100px;
+      position: absolute;
+    }
+  }
+
+  .scroll-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  ion-list {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    margin-bottom: 48px;
   }
 
   .add-remove-btn {
@@ -21,7 +37,41 @@
     padding-left: 0px;
   }
 
+  .list-md, .list-ios {
+    margin: 0px 0 48px 0;
+  }
+
   .list-md .item-block .item-inner, .list-ios .item-block .item-inner {
     padding-left: 10px;
+  }
+
+  .cart {
+    padding: 2px 5px 2px 12px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: color($colors, light);
+    box-shadow: 0px -2px 8px #a7a7a7;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+
+    div {
+      width: 60%;
+    }
+
+    button {
+      width: 45%;
+      font-size: 13px;
+    }
+
+    h5 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      align-self: center;
+    }
   }
 }

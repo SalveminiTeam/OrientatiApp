@@ -1,3 +1,3 @@
 echo off
-ionic serve --port 210
+ionic serve --lab --port 210
 PAUSE
