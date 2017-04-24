@@ -28,14 +28,14 @@
       "descrizione": "",
       "piano": 0,
       "foto": "assets/img/photos/auditorium.png",
-      "photo360": ""
+      "photo360": "auditorium"
     },
     {
       "nome": "Aula Newton",
       "categoria": "Sale conferenza",
       "descrizione": "",
       "piano": 0,
-      "foto": "assets/img/photos/",
+      "foto": "assets/img/photos/aulaNewton.png",
       "photo360": "aulaNewton"
     },
     {
@@ -43,7 +43,7 @@
       "categoria": "Sale conferenza",
       "descrizione": "",
       "piano": 0,
-      "foto": "assets/img/photos/",
+      "foto": "assets/img/photos/aulaVitulli.png",
       "photo360": "aulaVitulli"
     },
     {
@@ -52,7 +52,7 @@
       "descrizione": "",
       "piano": 0,
       "foto": "assets/img/photos/palint.png",
-      "photo360": ""
+      "photo360": "palInt"
     },
     {
       "nome": "Palestra Esterna",
@@ -60,7 +60,7 @@
       "descrizione": "",
       "piano": 0,
       "foto": "assets/img/photos/palest.png",
-      "photo360": ""
+      "photo360": "palEst"
     },
     {
       "nome": "Bar",
@@ -91,7 +91,7 @@
       "categoria": "Servizi e Sport",
       "descrizione": "",
       "piano": 0,
-      "foto": "assets/img/photos/",
+      "foto": "assets/img/photos/corridoioPalestra.png",
       "photo360": "corridoioPalestra"
     },
     {
@@ -103,7 +103,7 @@
       "photo360": "aulaDiFisica"
     },
     {
-      "nome": "Math lab",
+      "nome": "Mat lab",
       "categoria": "Laboratori",
       "descrizione": "",
       "piano": 1,
@@ -116,7 +116,7 @@
       "descrizione": "",
       "piano": 2,
       "foto": "assets/img/photos/lab2.png",
-      "photo360": ""
+      "photo360": "labDiChimica"
     },
     {
       "nome": "Laboratorio Linguistico",
@@ -124,15 +124,15 @@
       "descrizione": "",
       "piano": 2,
       "foto": "assets/img/photos/lab1.png",
-      "photo360": ""
+      "photo360": "labLinguistico"
     },
     {
       "nome": "Corso Tradizionale",
       "categoria": "Corsi",
       "descrizione": "",
       "piano": null,
-      "foto": "assets/img/photos/",
-      "photo360": ""
+      "foto": "assets/img/photos/classe2.png",
+      "photo360": "classe"
     },
     {
       "nome": "Corso Tablet",
@@ -140,23 +140,23 @@
       "descrizione": "",
       "piano": null,
       "foto": "assets/img/photos/lim.png",
-      "photo360": ""
+      "photo360": "classe"
     },
     {
       "nome": "Corso Cambrige",
       "categoria": "Corsi",
       "descrizione": "",
       "piano": null,
-      "foto": "assets/img/photos/",
-      "photo360": ""
+      "foto": "assets/img/photos/classe1.png",
+      "photo360": "classe"
     },
     {
       "nome": "Corso Sportivo",
       "categoria": "Corsi",
       "descrizione": "",
       "piano": null,
-      "foto": "assets/img/photos/",
-      "photo360": ""
+      "foto": "assets/img/photos/classe2.png",
+      "photo360": "classe"
     }
   ]
 }

@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content >
+<ion-content fixed>
   <ion-list [style.margin-bottom]="getMargin()">
     <div *ngFor="let cat of items">
       <ion-item-divider color="light" *ngIf="cat.cibo[0] != null" >{{cat.nome}}</ion-item-divider>
@@ -20,14 +20,17 @@
         </ion-row>
       </ion-item>
     </div>
-  </ion-list>
-  <ion-row class="cart" [style.opacity]="getOpacity()" [style.position]="position">
-    <h5>Totale: € {{toMoney(total)}}</h5>
-    <div>
-      <button ion-button outline icon-left color="danger" (click)="reset()">Annulla</button>
-      <button ion-button outline icon-left color="secondary"><ion-icon name="cart"></ion-icon>Procedi</button>
-    </div>
-  </ion-row>
+
+    <ion-row class="cart" [style.margin-left]="getOpacity()">
+      <h5>Totale: € {{toMoney(total)}}</h5>
+      <div>
+        <button ion-button outline icon-left color="danger" (click)="reset()">Annulla</button>
+        <button ion-button outline icon-left color="secondary"><ion-icon name="cart"></ion-icon>Procedi</button>
+      </div>
+    </ion-row>
+
+  </ion-list> 
 </ion-content>
+
 
 <!--[style.margin-bottom]="getMargin()" -->

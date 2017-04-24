@@ -9,18 +9,18 @@
           "quantita": 100
         },
         {
-          "nome": "Cocacola",
-          "prezzo": 0.80,
+          "nome": "Pepsi",
+          "prezzo": 1.20,
           "quantita": 80
         },
         {
           "nome": "Succo alla pera",
-          "prezzo": 0.80,
+          "prezzo": 1.40,
           "quantita": 50
         },
         {
           "nome": "Succo alla pesca",
-          "prezzo": 0.80,
+          "prezzo": 1.40,
           "quantita": 50
         }
       ]
@@ -35,7 +35,7 @@
         },
         {
           "nome": "Panzerotto",
-          "prezzo": 2.00,
+          "prezzo": 1.40,
           "quantita": 20
         },
         {
@@ -46,6 +46,21 @@
         {
           "nome": "Paninio (prosciutto)",
           "prezzo": 2.00,
+          "quantita": 20
+        },
+        {
+          "nome": "Taralli",
+          "prezzo": 0.30,
+          "quantita": 80
+        },
+        {
+          "nome": "Crackers",
+          "prezzo": 0.30,
+          "quantita": 20
+        },
+        {
+          "nome": "Patatine",
+          "prezzo": 0.70,
           "quantita": 20
         }
       ]
@@ -62,6 +77,36 @@
           "nome": "Cornetto (nutella)",
           "prezzo": 0.90,
           "quantita": 50
+        },
+        {
+          "nome": "Maritozzo",
+          "prezzo": 0.90,
+          "quantita": 30
+        },
+        {
+          "nome": "Brioche (vuota)",
+          "prezzo": 0.90,
+          "quantita": 60
+        },
+        {
+          "nome": "Krapfen (crema)",
+          "prezzo": 0.90,
+          "quantita": 50
+        },
+        {
+          "nome": "Krapfen (nutella)",
+          "prezzo": 0.90,
+          "quantita": 50
+        },
+        {
+          "nome": "Ciambella (vuota)",
+          "prezzo": 0.90,
+          "quantita": 50
+        },
+        {
+          "nome": "Ringo",
+          "prezzo": 0.90,
+          "quantita": 50
         }
       ]
     },
@@ -72,6 +117,16 @@
           "nome": "Goleador",
           "prezzo": 0.10,
           "quantita": 200
+        },
+        {
+          "nome": "M&M's",
+          "prezzo": 0.90,
+          "quantita": 30
+        },
+        {
+          "nome": "Gomme",
+          "prezzo": 0.10,
+          "quantita": 50
         }
       ]
     }

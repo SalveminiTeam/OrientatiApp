@@ -28,7 +28,6 @@ export class UtilityPage {
 
     searchQuery: string = "";
     total: number = 0;
-    position: string = "fixed";
 
     constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController) {  
         this.http.get('assets/data/bar_data.json').map((res: Response) => res.json()).subscribe(data => {
@@ -104,10 +103,11 @@ export class UtilityPage {
     }
 
     getOpacity() {
+
         if (this.total > 0) {
-            return '1';
-        } else {
             return '0';
+        } else {
+            return '-100%';
         }
     }
 
