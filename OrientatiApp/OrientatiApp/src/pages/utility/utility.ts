@@ -5,6 +5,8 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import _ from "lodash";
 
+import { Cart } from '../cart/cart';
+
 interface IFood {
     "nome": string;
     "prezzo": number;
@@ -29,7 +31,9 @@ export class UtilityPage {
     searchQuery: string = "";
     total: number = 0;
 
+
     constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController) {  
+
         this.http.get('assets/data/bar_data.json').map((res: Response) => res.json()).subscribe(data => {
             this.cats = data.categorie;
             this.cart = this.getWholeList(_.cloneDeep<ICat[]>(this.cats));
@@ -113,7 +117,7 @@ export class UtilityPage {
 
     getMargin() {
         if (this.total > 0) {
-            return '48px';
+            return '5.54rem';
         } else {
             return '0px';
         }
@@ -125,6 +129,12 @@ export class UtilityPage {
         this.searchQuery = "";
         this.getItems(null);
         this.total = 0;
+    }
+
+    submit() {
+        let profileModal = this.modalCtrl.create(Cart, { cart: this.cart });
+        profileModal.onDidDismiss( () => { this.reset(); });
+        profileModal.present();
     }
 
 }

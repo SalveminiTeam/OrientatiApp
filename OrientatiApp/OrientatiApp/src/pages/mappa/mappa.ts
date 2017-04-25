@@ -1,7 +1,6 @@
 ﻿import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-
 @Component({
   selector: 'page-mappa',
   templateUrl: 'mappa.html'
@@ -13,9 +12,16 @@ export class MappaPage {
     zoomMin: number = 0.7;
     zoomStep: number = 0.5;
 
-  constructor(public navCtrl: NavController) {
-  }
+    floor: number = 0;
 
+    constructor(public navCtrl: NavController) {
+
+    }
+
+
+    ionViewWillEnter() {
+
+    }
 
   zoomIn() {
 

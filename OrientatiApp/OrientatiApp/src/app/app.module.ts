@@ -11,6 +11,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { Viewer } from '../pages/viewer/viewer';
 import { Viewer360Component } from '../components/viewer360/viewer360';
 import { DettagliPage } from '../pages/dettagli/dettagli';
+import { Cart } from '../pages/cart/cart';
+import { HomePage } from '../pages/home/home';
+import { Thanks } from '../pages/thanks/thanks';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,7 +27,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     Viewer,
     Viewer360Component,
-    DettagliPage
+    DettagliPage,
+    Cart,
+    HomePage,
+    Thanks
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     Viewer,
     Viewer360Component,
-    DettagliPage
+    DettagliPage,
+    Cart,
+    HomePage,
+    Thanks
   ],
   providers: [
     StatusBar,

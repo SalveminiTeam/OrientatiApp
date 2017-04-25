@@ -14,7 +14,8 @@ export class TabsPage {
   tab2Root = CercaPage;
   tab3Root = UtilityPage;
 
-  constructor() {
+  color: string = 'toolbar';
 
+  constructor() {
   }
 }
