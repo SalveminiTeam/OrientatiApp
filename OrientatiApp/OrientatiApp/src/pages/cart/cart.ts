@@ -46,8 +46,12 @@ export class Cart {
 
     }
 
-    back() {
+    deny() {
         this.viewCtrl.dismiss();
+    }
+
+    back() {
+        this.navCtrl.pop();
     }
 
     submit() {

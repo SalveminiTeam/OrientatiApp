@@ -6,25 +6,25 @@
 
 <ion-content >
   <ion-scroll scrollX="true" scrollY="true" zoom="true">
-    <ion-row *ngIf="floor == 0">
+    <div *ngIf="floor == 0">
       <img [ngStyle]="{'zoom': zoom}" src="assets/maps/Pt.png" class="mapImg" usemap="#MapT"/>
       <map name="MapT" id="MapT">
-        <area title="Palestra" shape="poly" coords="140,105,352,105,352,208,140,208" />
-        <area title="Auditorium" shape="poly" coords="256,330,392,328,393,447,259,449,257,410,249,411,247,351,256,350" />
-        <area title="Sala Fitness" shape="poly" coords="166,487,166,389,226,390,228,487" />
-        <area title="Sala ping-pong" shape="poly" coords="167,389,166,330,207,331,206,310,228,310,226,390" />
-        <area title="Presidenza" shape="poly" coords="145,566,173,566,173,786,186,786,186,847,145,847" />
-        <area title="Biblioteca" shape="poly" coords="250,644,291,644,292,744,249,744" />
-        <area title="Bar" shape="poly" coords="247,486,310,487,310,507,247,506" />
-        <area title="Aula Vitulli" shape="poly" coords="372,488,310,486,311,546,372,546" />
-        <area title="Aula Newton" shape="poly" coords="310,665,372,665,373,726,310,726" />
+        <area title="Palestra" shape="poly" coords="140,105,352,105,352,208,140,208" (click)="enterRoom('Palestra Interna')"/>
+        <area title="Auditorium" shape="poly" coords="256,330,392,328,393,447,259,449,257,410,249,411,247,351,256,350" (click)="enterRoom('Auditorium')"/>
+        <area title="Sala Fitness" shape="poly" coords="166,487,166,389,226,390,228,487" (click)="enterRoom('Saletta')"/>
+        <area title="Sala ping-pong" shape="poly" coords="167,389,166,330,207,331,206,310,228,310,226,390" (click)="enterRoom('Sala PingPong')"/>
+        <area title="Presidenza" shape="poly" coords="145,566,173,566,173,786,186,786,186,847,145,847" (click)="enterRoom('Presidenza')"/>
+        <area title="Biblioteca" shape="poly" coords="250,644,291,644,292,744,249,744" (click)="enterRoom('Biblioteca')"/>
+        <area title="Bar" shape="poly" coords="247,486,310,487,310,507,247,506" (click)="enterRoom('Bar')"/>
+        <area title="Aula Vitulli" shape="poly" coords="372,488,310,486,311,546,372,546" (click)="enterRoom('Aula Vitulli')"/>
+        <area title="Aula Newton" shape="poly" coords="310,665,372,665,373,726,310,726" (click)="enterRoom('Aula Newton')"/>
         <area title="Aule" shape="poly" coords="186,784,394,786,394,826,188,826" />
         <area title="Aule" shape="poly" coords="250,604,291,605,291,644,250,645" />
         <area title="Aule" shape="poly" coords="310,586,372,586,372,665,326,664,326,626,310,626" />
       </map>
-    </ion-row>
+    </div>
 
-    <ion-row *ngIf="floor == 1">
+    <div *ngIf="floor == 1">
       <img [ngStyle]="{'zoom': zoom}" src="assets/maps/P1.png" class="mapImg" usemap="#Map1" />
       <map name="Map1" id="Map1">
         <area title="Aula" shape="poly" coords="114,106,114,186,142,186,142,159,334,158,334,186,388,185,388,107" />
@@ -34,9 +34,9 @@
         <area title="Aula" shape="poly" coords="141,320,226,319,226,476,142,476" />
         <area title="Aula" shape="poly" coords="363,447,417,448,417,816,363,817" />
       </map>
-    </ion-row>
+    </div>
 
-    <ion-row *ngIf="floor == 2">
+    <div *ngIf="floor == 2">
       <img [ngStyle]="{'zoom': zoom}" src="assets/maps/P2.png" class="mapImg" usemap="#Map2" />
       <map name="Map2" id="Map2">
         <area title="Aula" shape="poly" coords="114,106,114,186,142,186,142,159,334,158,334,186,388,185,388,107" />
@@ -46,7 +46,7 @@
         <area title="Aula" shape="poly" coords="141,320,226,319,226,476,142,476" />
         <area title="Aula" shape="poly" coords="363,447,417,448,417,816,363,817" />
       </map>
-    </ion-row>
+    </div>
 
     <ion-row class="dwnDutton">
       <ion-row><button ion-button icon-only (click)="zoomIn()" color="dark"> <ion-icon name="add"></ion-icon> </button> </ion-row>
@@ -55,9 +55,9 @@
     <ion-fab left bottom>
       <button ion-fab color="dark"><ion-icon name="reorder"></ion-icon></button>
       <ion-fab-list side="right">
-        <button ion-fab><img class="fabImg" src="assets/logos/Icon-floor-ground.png" (click)="floor = 0"/></button>
-        <button ion-fab><img class="fabImg" src="assets/logos/Icon-floor-first.png" (click)="floor = 1"/></button>
-        <button ion-fab><img class="fabImg" src="assets/logos/Icon-floor-second.png" (click)="floor = 2"/></button>
+        <button ion-fab (click)="floor = 0"><ion-icon class="groundFloor"></ion-icon></button>
+        <button ion-fab (click)="floor = 1"><ion-icon class="firstFloor"></ion-icon></button>
+        <button ion-fab (click)="floor = 2"><ion-icon class="secondFloor"></ion-icon></button>
       </ion-fab-list>
     </ion-fab>
   </ion-scroll>

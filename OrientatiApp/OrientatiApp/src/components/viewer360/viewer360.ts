@@ -13,7 +13,7 @@ export class Viewer360Component {
     renderer;
     scene;
     manager;
-    animating: boolean;
+    animating: boolean = true;
 
     @ViewChild("container") container: ElementRef;
 

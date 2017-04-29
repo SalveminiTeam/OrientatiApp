@@ -19,9 +19,15 @@
     transition: all 100ms ease-in;
   }
 
+  .mapDiv{
+    width: 100%;
+    height: 100%;
+  }
+
   .scroll-zoom-wrapper {
     height: 100%;
     display: flex;
+    //justify-content: center;
     flex-direction: row;
     overflow-x: auto;
     overflow-y: auto;
@@ -43,5 +49,20 @@
   .fab-in-list {
     width: 45px;
     height: 45px;
+  }
+
+  .groundFloor {
+    content: url(../assets/icon/ground-floor.svg);
+    height: calc(100% + 3px);
+  }
+
+  .firstFloor {
+    content: url(../assets/icon/first-floor.svg);
+    height: calc(100% + 3px);
+  }
+
+  .secondFloor {
+    content: url(../assets/icon/second-floor.svg);
+    height: calc(100% + 3px);
   }
 }

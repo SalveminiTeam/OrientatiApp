@@ -1,5 +1,5 @@
 ﻿import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, AlertController } from 'ionic-angular';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -32,7 +32,7 @@ export class UtilityPage {
     total: number = 0;
 
 
-    constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController) {  
+    constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController, public alertCtrl: AlertController) {  
 
         this.http.get('assets/data/bar_data.json').map((res: Response) => res.json()).subscribe(data => {
             this.cats = data.categorie;
@@ -40,6 +40,14 @@ export class UtilityPage {
             console.log(this.cart);
             this.getItems(null);
         });
+
+        let alert = this.alertCtrl.create({
+            title: 'Attenzione',
+            subTitle: "L'Utility del bar non è attualmente funzionante. Gli ordini non verranno processati.",
+            buttons: ['OK']
+        });
+        alert.present();
+
     }
 
     getItems(ev) {

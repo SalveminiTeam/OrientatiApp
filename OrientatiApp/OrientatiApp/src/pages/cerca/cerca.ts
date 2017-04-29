@@ -1,10 +1,12 @@
 ﻿import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, Keyboard } from 'ionic-angular';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { DettagliPage } from '../dettagli/dettagli'
+import { DettagliPage } from '../dettagli/dettagli';
+
+declare const jss;
 
 interface IRoom {
     "nome": string;
@@ -33,8 +35,10 @@ export class CercaPage {
     items = [];
     searchQuery: string = "";
 
+    isInCat: boolean = false;
 
-    constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController) {
+
+    constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController, public keyB: Keyboard) {
         this.http.get('assets/data/rooms_data.json').map((res: Response) => res.json()).subscribe(data => {
             this.rooms = data.stanze;
             this.cat = data.categorie;
@@ -76,16 +80,56 @@ export class CercaPage {
 
             return found;
         });
+
+        this.updateButton();
     }
 
     enterCat(item: ICategory) {
         this.searchQuery = "categoria:" + item.nome;
+        this.isInCat = true;
+        this.updateButton();
         this.getItems(null);
     }
 
     enterRoom(room: IRoom) {
-        let profileModal = this.modalCtrl.create(DettagliPage, { title: room.nome, description: room.descrizione, bannerImage: "assets/360photos/banner/" + room.photo360 + ".jpg", photo360: room.photo360 });
+        let profileModal = this.modalCtrl.create(DettagliPage, { title: room.nome, description: room.descrizione, bannerImage: "assets/360photos/banner/" + room.photo360 + ".jpg", photo360: room.photo360, photo: room.foto });
         profileModal.present();
+    }
+
+    onCancel(ev) {
+        this.searchQuery = "";
+        this.keyB.close();
+        this.isInCat = false;
+        this.updateButton();
+    }
+
+    onClear(ev) {
+        this.searchQuery = "";
+        this.isInCat = false;
+        this.updateButton();
+    }
+
+
+    updateButton() {
+
+        if (!this.isInCat || this.searchQuery == '') {
+            jss.set('.searchbar-md .searchbar-search-icon', {
+                'display': 'block !important'
+            });
+
+            jss.set('.searchbar-md .searchbar-md-cancel', {
+                'display': 'none !important'
+            });
+        } else {
+            jss.set('.searchbar-md .searchbar-search-icon', {
+                'display': 'none !important'
+            });
+
+            jss.set('.searchbar-md .searchbar-md-cancel', {
+                'display': 'block !important'
+            });
+        }
+
     }
 
 }

@@ -25,7 +25,7 @@
     {
       "nome": "Auditorium",
       "categoria": "Sale conferenza",
-      "descrizione": "",
+      "descrizione": "Questo è l'auditoriorium. Qui vi si svolgono conferenze, presentazioni ed eventi importanti. Ha a disposizione un video proiettore, un impianto stereo, un computer e posti a sedere. È situata al piano terra.",
       "piano": 0,
       "foto": "assets/img/photos/auditorium.png",
       "photo360": "auditorium"
@@ -33,7 +33,7 @@
     {
       "nome": "Aula Newton",
       "categoria": "Sale conferenza",
-      "descrizione": "",
+      "descrizione": "Questa è l'aula Newton. Qui vi si svolgono conferenze e consigli studenteschi.  Ha a disposizione una LIM, un impianto stereo, un computer, e posti a sedere che possono essere, ad esigenza, aumentati. È situata al piano terra.",
       "piano": 0,
       "foto": "assets/img/photos/aulaNewton.png",
       "photo360": "aulaNewton"
@@ -41,7 +41,7 @@
     {
       "nome": "Aula Vitulli",
       "categoria": "Sale conferenza",
-      "descrizione": "",
+      "descrizione": "Questa è l'aula Vitulli. Qui vi si svolgono conferenze.  Ha a disposizione una LIM, un impianto stereo, un computer, una televisione, un pianoforte e posti a sedere che possono essere, ad esigenza, aumentati. È situata al piano terra.",
       "piano": 0,
       "foto": "assets/img/photos/aulaVitulli.png",
       "photo360": "aulaVitulli"
@@ -49,7 +49,7 @@
     {
       "nome": "Palestra Interna",
       "categoria": "Servizi e Sport",
-      "descrizione": "",
+      "descrizione": "Questa è la palestra interna. Qui si svolgono le lezioni pratiche di educazione fisica. È dotata di un campo multiuso, sostegno per la rete di palla a volo, spalliere francesi, tappetini, coni, palle, canestri, cerchi e altro materiale sportivo. Ci sono due spogliatoi (uno femminile è uno maschile) con rispettivi bagni. È presente anche una sala-magazzino e una sala dedicata ai docenti. È situata al piano terra. ",
       "piano": 0,
       "foto": "assets/img/photos/palint.png",
       "photo360": "palInt"
@@ -57,7 +57,7 @@
     {
       "nome": "Palestra Esterna",
       "categoria": "Servizi e Sport",
-      "descrizione": "",
+      "descrizione": "Questa è la palestra esterna. Qui si svolgono le lezioni pratiche di educazione fisica. È dotata di un campo multiuso. È situata al piano terra, esternamente. ",
       "piano": 0,
       "foto": "assets/img/photos/palest.png",
       "photo360": "palEst"
@@ -71,9 +71,17 @@
       "photo360": ""
     },
     {
-      "nome": "Sala PingPong",
+      "nome": "Biblioteca",
       "categoria": "Servizi e Sport",
       "descrizione": "",
+      "piano": 0,
+      "foto": "assets/img/photos/biblioteca.png",
+      "photo360": "biblioteca"
+    },
+    {
+      "nome": "Sala PingPong",
+      "categoria": "Servizi e Sport",
+      "descrizione": "Questa è la stanza dove si può giocare a Ping pong. È dotata di tavoli da Ping pong, racchette e palline. È situata al primo piano.",
       "piano": 0,
       "foto": "assets/img/photos/pingpong.png",
       "photo360": "salaPingPong"
@@ -81,7 +89,7 @@
     {
       "nome": "Saletta",
       "categoria": "Servizi e Sport",
-      "descrizione": "",
+      "descrizione": "Questa è la saletta. Qui si svolgono le lezioni pratiche di educazione e si possono fare esercizi di potenziamento. È dotata di attrezzi e tappetini. È situata al primo piano.",
       "piano": 0,
       "foto": "assets/img/photos/fitness.png",
       "photo360": "saletta"
@@ -105,7 +113,7 @@
     {
       "nome": "Mat lab",
       "categoria": "Laboratori",
-      "descrizione": "",
+      "descrizione": "Questo è il laboratorio informatico. È fornito di diverse unità di computer, una LIM e un impianto stereo. È situato al primo piano.",
       "piano": 1,
       "foto": "assets/img/photos/lab1.png",
       "photo360": ""
@@ -113,7 +121,7 @@
     {
       "nome": "Laboratorio di Chimica",
       "categoria": "Laboratori",
-      "descrizione": "",
+      "descrizione": "Questo è il laboratorio di chimica. Vi si può accedere nelle ore di scienze. È fornito di materiale utile per esperimenti. È situato al secondo piano.",
       "piano": 2,
       "foto": "assets/img/photos/lab2.png",
       "photo360": "labDiChimica"
@@ -121,7 +129,7 @@
     {
       "nome": "Laboratorio Linguistico",
       "categoria": "Laboratori",
-      "descrizione": "",
+      "descrizione": "Questo è il laboratorio linguistico. Qui si possono svolgere esercizi atti ad approfondire le proprie conoscenze linguistiche. È fornito di computer, una LIM e un impianto stereo. È situata al primo piano. ",
       "piano": 2,
       "foto": "assets/img/photos/lab1.png",
       "photo360": "labLinguistico"
@@ -129,7 +137,7 @@
     {
       "nome": "Corso Tradizionale",
       "categoria": "Corsi",
-      "descrizione": "",
+      "descrizione": "Questa è la sezione tradizionale. È l’indirizzo tradizionale del Liceo Scientifico. Nel biennio si seguono lezioni di Grammatica e Antologia, Matematica e Fisica, Latino, Inglese, Storia dell’Arte, Disegno Tecnico, Storia e Geografia, Ed. Fisica e Religione (facoltativa). Nel triennio, poi, le lezioni di Filosofia sostituiranno quelle di Geografia.",
       "piano": null,
       "foto": "assets/img/photos/classe2.png",
       "photo360": "classe"
@@ -137,7 +145,7 @@
     {
       "nome": "Corso Tablet",
       "categoria": "Corsi",
-      "descrizione": "",
+      "descrizione": "Questa è la sezione tablet. Si seguono le stesse materie dell’indirizzo tradizionale, ma al posto della cartella piena di libri, si porta a scuola il tablet e lo si usa per studiare a casa, con la LIM e il tablet le lezioni diventeranno più interattive e si impara a lavorare in gruppo. Si apprende anche a interagire con la tecnologia e il web in modo più responsabile e consapevole.",
       "piano": null,
       "foto": "assets/img/photos/lim.png",
       "photo360": "classe"
@@ -145,7 +153,7 @@
     {
       "nome": "Corso Cambrige",
       "categoria": "Corsi",
-      "descrizione": "",
+      "descrizione": "Questa è la sezione cambrige. Questo corso è finalizzato al raggiungimento della certificazione IGCSE, un diploma di scuola secondaria inglese, che consente l’accesso ad oltre 100 atenei di tutto il mondo. L’orario prevede due ore settimanali in più di inglese nel biennio, tre nel triennio. Le lezioni di Matematica, Geografia e Latino, e nel triennio anche di Biologia, Chimica e Fisica, saranno tenute in lingua inglese dal docente e da un lettore madrelingua.",
       "piano": null,
       "foto": "assets/img/photos/classe1.png",
       "photo360": "classe"
@@ -153,7 +161,23 @@
     {
       "nome": "Corso Sportivo",
       "categoria": "Corsi",
-      "descrizione": "",
+      "descrizione": "Questa è la sezione sportiva. Il Liceo Scientifico si plasma per chi vive lo sport a livello agonistico. Latino e Storia dell’Arte sono sostituite da discipline come Scienze Motorie e Sportive, Diritto ed Economia dello Sport. Si può, inoltre, sperimentare varie discipline sportive, che si alternano durante l’anno (football americano, nuoto, atletica leggera, orientering etc.)",
+      "piano": null,
+      "foto": "assets/img/photos/classe2.png",
+      "photo360": "classe"
+    },
+    {
+      "nome": "Corso Bilinguismo",
+      "categoria": "Corsi",
+      "descrizione": "Questa è la sezione con bilinguismo tedesco. Questo corso prepara per un diploma valido a livello europeo per l’accesso a università internazionali con l’approfondimento della lingua tedesca (livello b2/c1), con 3 ore di tedesco settimanali nel biennio che diventeranno 4 nel triennio. Si può, inoltre, fare esperienza con stage all’estero per approfondimenti nell’ambito linguistico e lavorativo.\nQuesta è la sezione con bilinguismo spagnolo. Questo corso prepara per un diploma valido a livello europeo per l’accesso a università internazionali con l’approfondimento della lingua spagnola(livello b2/c1), con 3 ore di spagnolo settimanali nel biennio che diventeranno 4 nel triennio. Si può, inoltre, fare esperienza con stage all’estero per approfondimenti nell’ambito linguistico e lavorativo.",
+      "piano": null,
+      "foto": "assets/img/photos/classe2.png",
+      "photo360": "classe"
+    },
+    {
+      "nome": "Corso Comunicazione",
+      "categoria": "Corsi",
+      "descrizione": "Questa è la sezione riguardante la comunicazione. Oltre all’orario base del liceo scientifico, si possono seguire percorsi didattici specifici, corsi di formazione, partecipare ad attività culturali sui diversi linguaggi della comunicazione. Si possono far emergere tutte le proprie capacità comunicative, sperimentando in prima persona la molteplicità dei linguaggi della comunicazione (fotografico, cinematografico, giornalistico, pubblicitario, grafico, musicale, teatrale).",
       "piano": null,
       "foto": "assets/img/photos/classe2.png",
       "photo360": "classe"

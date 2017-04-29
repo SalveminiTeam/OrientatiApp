@@ -53,18 +53,21 @@
     background-color: color($colors, light);
     box-shadow: 0px -2px 8px #a7a7a7;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
 
     div {
-      width: 70%;
+      width: 65%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: stretch;
     }
 
     button {
-      width: 47%;
+      width: 48%;
       font-size: 13px;
     }
 

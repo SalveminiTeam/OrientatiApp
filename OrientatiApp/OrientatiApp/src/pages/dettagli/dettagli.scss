@@ -1,23 +1,13 @@
 ﻿page-dettagli {
 
-  .toolbar-md-toolbar .toolbar-background-md {
-    background-image: url('../assets/img/photos/auditorium.png');
+  .toolbar-md-toolbar .toolbar-background-md, .toolbar-ios-toolbar .toolbar-background-ios {
     background-size: 150%;
     background-position: center;
-    -webkit-filter: blur(10px) brightness(100%);
-    -moz-filter: blur(10px) brightness(100%);
-    -o-filter: blur(10px) brightness(100%);
-    -ms-filter: blur(10px) brightness(100%);
-    filter: blur(10px) brightness(100%);
-  }
-
-  .toolbar-ios-toolbar .toolbar-background-ios {
-    background-image: url('../assets/img/photos/auditorium.png');
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+    -webkit-filter: blur(10px) brightness(80%);
+    -moz-filter: blur(10px) brightness(80%);
+    -o-filter: blur(10px) brightness(80%);
+    -ms-filter: blur(10px) brightness(80%);
+    filter: blur(10px) brightness(80%);
   }
 
   img {
@@ -44,5 +34,9 @@
 
   .scroll-content {
     margin-bottom: 0px;
+  }
+
+  p {
+    font-size: medium;
   }
 }

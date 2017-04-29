@@ -1,7 +1,10 @@
 ﻿import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 
-import { Viewer } from '../viewer/viewer'
+
+declare const jss;
+
+import { Viewer } from '../viewer/viewer';
 
 @Component({
   selector: 'page-dettagli',
@@ -12,9 +15,10 @@ export class DettagliPage {
 
 
     title: string;
-    descrizione: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum lacinia turpis non dictum. Ut pulvinar ligula ex, sed viverra metus convallis et. Phasellus interdum lorem nulla, et cursus sem pellentesque at. Ut non bibendum tortor. Nunc sollicitudin gravida enim at elementum. Ut ut elit pretium, rhoncus eros non, molestie nibh. Proin ut lorem vestibulum, condimentum eros vitae, elementum enim. Vivamus purus augue, malesuada sed turpis eu, posuere facilisis tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum lacinia turpis non dictum. Ut pulvinar ligula ex, sed viverra metus convallis et. Phasellus interdum lorem nulla, et cursus sem pellentesque at. Ut non bibendum tortor. Nunc sollicitudin gravida enim at elementum. Ut ut elit pretium, rhoncus eros non, molestie nibh. Proin ut lorem vestibulum, condimentum eros vitae, elementum enim. Vivamus purus augue, malesuada sed turpis eu, posuere facilisis tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
+    descrizione: string; //= "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum lacinia turpis non dictum. Ut pulvinar ligula ex, sed viverra metus convallis et. Phasellus interdum lorem nulla, et cursus sem pellentesque at. Ut non bibendum tortor. Nunc sollicitudin gravida enim at elementum. Ut ut elit pretium, rhoncus eros non, molestie nibh. Proin ut lorem vestibulum, condimentum eros vitae, elementum enim. Vivamus purus augue, malesuada sed turpis eu, posuere facilisis tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum lacinia turpis non dictum. Ut pulvinar ligula ex, sed viverra metus convallis et. Phasellus interdum lorem nulla, et cursus sem pellentesque at. Ut non bibendum tortor. Nunc sollicitudin gravida enim at elementum. Ut ut elit pretium, rhoncus eros non, molestie nibh. Proin ut lorem vestibulum, condimentum eros vitae, elementum enim. Vivamus purus augue, malesuada sed turpis eu, posuere facilisis tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
     bannerImage: string;
     photo360: string;
+    photo: string;
 
     tabBarElement: any;
 
@@ -23,6 +27,12 @@ export class DettagliPage {
         this.title = params.get("title");
         this.descrizione = params.get("description");
         this.photo360 = params.get("photo360");
+        this.photo = params.get("photo");
+
+        jss.set('.toolbar-md-toolbar .toolbar-background-md, .toolbar-ios-toolbar .toolbar-background-ios', {
+            'background-image': 'url("' + this.photo + '")'
+        });
+
     }
 
     ionViewWillEnter() {
@@ -30,7 +40,7 @@ export class DettagliPage {
     }
 
     ionViewWillLeave() {
-
+   
     }
 
     show360() {
@@ -39,6 +49,9 @@ export class DettagliPage {
     }
 
     back() {
+        jss.set('.toolbar-md-toolbar .toolbar-background-md, .toolbar-ios-toolbar .toolbar-background-ios', {
+            'background-image': 'none'
+        });
         this.navCtrl.pop();
     }
 }

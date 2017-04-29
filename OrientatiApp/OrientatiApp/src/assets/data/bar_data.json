@@ -22,6 +22,41 @@
           "nome": "Succo alla pesca",
           "prezzo": 1.40,
           "quantita": 50
+        },
+        {
+          "nome": "Cioccolata calda",
+          "prezzo": 1.50,
+          "quantita": 50
+        },
+        {
+          "nome": "Cappuccino",
+          "prezzo": 0.80,
+          "quantita": 50
+        },
+        {
+          "nome": "The",
+          "prezzo": 0.80,
+          "quantita": 50
+        },
+        {
+          "nome": "Camomilla",
+          "prezzo": 0.80,
+          "quantita": 50
+        },
+        {
+          "nome": "Orzo",
+          "prezzo": 0.80,
+          "quantita": 50
+        },
+        {
+          "nome": "Decaffeinato",
+          "prezzo": 0.70,
+          "quantita": 50
+        },
+        {
+          "nome": "Caffé",
+          "prezzo": 0.50,
+          "quantita": 50
         }
       ]
     },
@@ -107,12 +142,22 @@
           "nome": "Ringo",
           "prezzo": 0.90,
           "quantita": 50
+        },
+        {
+          "nome": "Ciccolata",
+          "prezzo": 0.90,
+          "quantita": 50
         }
       ]
     },
     {
       "nome": "Altro",
       "cibo": [
+        {
+          "nome": "Prodotti per celiaci",
+          "prezzo": 1.00,
+          "quantita": 50
+        },
         {
           "nome": "Goleador",
           "prezzo": 0.10,
