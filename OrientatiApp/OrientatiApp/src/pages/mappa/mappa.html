@@ -1,50 +1,57 @@
 ﻿<ion-header>
   <ion-navbar color="tabMap">
-    <ion-title>Mappa</ion-title>
+    <ion-title>Mappa {{pinchH}}</ion-title>
+    <ion-buttons end>
+      <button ion-button color="light" onclick="location.href='http://google.com'">
+        <ion-icon name="paper"></ion-icon>
+        &nbsp;feedback
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content >
-  <ion-scroll scrollX="true" scrollY="true" zoom="true">
-    <div *ngIf="floor == 0">
-      <img [ngStyle]="{'zoom': zoom}" src="assets/maps/Pt.png" class="mapImg" usemap="#MapT"/>
-      <map name="MapT" id="MapT">
-        <area title="Palestra" shape="poly" coords="140,105,352,105,352,208,140,208" (click)="enterRoom('Palestra Interna')"/>
-        <area title="Auditorium" shape="poly" coords="256,330,392,328,393,447,259,449,257,410,249,411,247,351,256,350" (click)="enterRoom('Auditorium')"/>
-        <area title="Sala Fitness" shape="poly" coords="166,487,166,389,226,390,228,487" (click)="enterRoom('Saletta')"/>
+  <ion-scroll scrollX="true" scrollY="true" zoom="true" (pinch)="onPinch($event)">
+    <div [ngStyle]="{'opacity': opacityT, 'display': displayT}" class="mapDiv" >
+      <img [ngStyle]="{'height': heightT.toString() + '%'}" src="assets/maps/Pt.png" class="mapImg" usemap="#MapT"/>
+      <map name="MapT" id="MapT" #mapT  >
+        <area title="Aule" shape="poly" coords="30,2226,154,2225,151,2045,115,2044,112,1387,30,1389" (click)="showToast('Presidenza')"/>
+        <area title="Palestra" shape="poly" coords="12,5,649,6,649,139,708,138,707,440,625,439,624,314,14,314" (click)="enterRoom('Palestra Interna')"/>
+        <area title="Auditorium" shape="poly" coords="362,678,364,742,337,741,340,922,366,921,371,1031,769,1030,769,674" (click)="enterRoom('Auditorium')"/>
+        <area title="Sala Fitness" shape="poly" coords="95,1148,275,1150,275,620,216,620,217,679,94,683" (click)="enterRoom('Saletta')"/>
         <area title="Sala ping-pong" shape="poly" coords="167,389,166,330,207,331,206,310,228,310,226,390" (click)="enterRoom('Sala PingPong')"/>
-        <area title="Presidenza" shape="poly" coords="145,566,173,566,173,786,186,786,186,847,145,847" (click)="enterRoom('Presidenza')"/>
-        <area title="Biblioteca" shape="poly" coords="250,644,291,644,292,744,249,744" (click)="enterRoom('Biblioteca')"/>
-        <area title="Bar" shape="poly" coords="247,486,310,487,310,507,247,506" (click)="enterRoom('Bar')"/>
-        <area title="Aula Vitulli" shape="poly" coords="372,488,310,486,311,546,372,546" (click)="enterRoom('Aula Vitulli')"/>
-        <area title="Aula Newton" shape="poly" coords="310,665,372,665,373,726,310,726" (click)="enterRoom('Aula Newton')"/>
-        <area title="Aule" shape="poly" coords="186,784,394,786,394,826,188,826" />
-        <area title="Aule" shape="poly" coords="250,604,291,605,291,644,250,645" />
-        <area title="Aule" shape="poly" coords="310,586,372,586,372,665,326,664,326,626,310,626" />
+        <area title="Presidenza" shape="poly" coords="30,2226,154,2225,151,2045,115,2044,112,1387,30,1389" (click)="showToast('Presidenza')"/>
+        <area title="Biblioteca" shape="poly" coords="344,1623,345,1921,470,1923,467,1623" (click)="enterRoom('Biblioteca')"/>
+        <area title="Bar" shape="poly" coords="338,1148,525,1146,524,1209,339,1207" (click)="enterRoom('Bar')"/>
+        <area title="Aula Vitulli" shape="poly" coords="528,1149,528,1325,707,1323,706,1154" (click)="enterRoom('Aula Vitulli')"/>
+        <area title="Aula Newton" shape="poly" coords="525,1680,709,1681,712,1865,526,1864" (click)="enterRoom('Aula Newton')"/>
+        <area title="Aule" shape="poly" coords="154,2045,155,2164,778,2164,777,2046" (click)="showToast('Aule')"/>
+        <area title="Aule" shape="poly" coords="524,1445,524,1563,574,1563,576,1679,708,1678,706,1446" (click)="showToast('Aule')"/>
+        <area title="Aule" shape="poly" coords="345,1502,345,1620,466,1621,465,1504" (click)="showToast('Aule')"/>
       </map>
     </div>
 
-    <div *ngIf="floor == 1">
-      <img [ngStyle]="{'zoom': zoom}" src="assets/maps/P1.png" class="mapImg" usemap="#Map1" />
-      <map name="Map1" id="Map1">
-        <area title="Aula" shape="poly" coords="114,106,114,186,142,186,142,159,334,158,334,186,388,185,388,107" />
-        <area title="Aula Di Fisica" shape="poly" coords="142,238,227,239,226,319,142,319" />
-        <area title="Mat lab" shape="poly" coords="141,477,226,477,226,554,141,554" />
-        <area title="Aula" shape="poly" coords="251,266,308,265,307,423,251,423" />
-        <area title="Aula" shape="poly" coords="141,320,226,319,226,476,142,476" />
-        <area title="Aula" shape="poly" coords="363,447,417,448,417,816,363,817" />
+    <div [ngStyle]="{'opacity': opacity1, 'display': display1}" class="mapDiv">
+      <img [ngStyle]="{'height': height1.toString() + '%'}" src="assets/maps/P1.png" class="mapImg" usemap="#Map1" />
+      <map name="Map1" id="Map1" #map1>
+        <area title="Aule" shape="poly" coords="752,2133,908,2133,910,1026,749,1028" (click)="showToast('Aule')"/>
+        <area title="Aule" shape="poly" coords="84,642,339,641,338,953,85,953" (click)="showToast('Aule')"/>
+        <area title="Aule" shape="poly" coords="413,475,414,947,578,946,579,477" (click)="showToast('Aule')"/>
+        <area title="Aule" shape="poly" coords="4,4,3,240,84,242,85,159,659,160,660,240,825,238,825,4" />
+        <area title="Aula di Fisica" shape="poly" coords="87,956,85,1345,338,1344,338,956" (click)="enterRoom('Aula di Fisica')"/>
+        <area title="Mat lab" shape="poly" coords="85,401,85,641,339,640,340,402" (click)="enterRoom('Mat lab')"/>
       </map>
     </div>
 
-    <div *ngIf="floor == 2">
-      <img [ngStyle]="{'zoom': zoom}" src="assets/maps/P2.png" class="mapImg" usemap="#Map2" />
-      <map name="Map2" id="Map2">
-        <area title="Aula" shape="poly" coords="114,106,114,186,142,186,142,159,334,158,334,186,388,185,388,107" />
-        <area title="Laboratorio Di Chimica" shape="poly" coords="142,238,227,239,226,319,142,319" />
-        <area title="Laboratorio Linguistico" shape="poly" coords="141,477,226,477,226,554,141,554" />
-        <area title="Aula" shape="poly" coords="251,266,308,265,307,423,251,423" />
-        <area title="Aula" shape="poly" coords="141,320,226,319,226,476,142,476" />
-        <area title="Aula" shape="poly" coords="363,447,417,448,417,816,363,817" />
+    <div [ngStyle]="{'opacity': opacity2, 'display': display2}" class="mapDiv">
+      <img [ngStyle]="{'height': height2.toString() + '%'}" src="assets/maps/P2.png" class="mapImg" usemap="#Map2" />
+      <map name="Map2" id="Map2" #map2>
+        <area title="Aule" shape="poly" coords="752,2133,908,2133,910,1026,749,1028" (click)="showToast('Aule')"/>
+        <area title="Aule" shape="poly" coords="84,642,339,641,338,953,85,953" (click)="showToast('Aule')"/>
+        <area title="Aule" shape="poly" coords="413,475,414,947,578,946,579,477" (click)="showToast('Aule')"/>
+        <area title="Aule" shape="poly" coords="4,4,3,240,84,242,85,159,659,160,660,240,825,238,825,4" (click)="showToast('Aule')"/>
+        <area title="Laboratorio di Chimica" shape="poly" coords="87,956,85,1345,338,1344,338,956" (click)="enterRoom('Laboratorio di Chimica')"/>
+        <area title="Laboratorio Linguistico" shape="poly" coords="85,401,85,641,339,640,340,402" (click)="enterRoom('Laboratorio Linguistico')"/>
       </map>
     </div>
 
@@ -55,9 +62,9 @@
     <ion-fab left bottom>
       <button ion-fab color="dark"><ion-icon name="reorder"></ion-icon></button>
       <ion-fab-list side="right">
-        <button ion-fab (click)="floor = 0"><ion-icon class="groundFloor"></ion-icon></button>
-        <button ion-fab (click)="floor = 1"><ion-icon class="firstFloor"></ion-icon></button>
-        <button ion-fab (click)="floor = 2"><ion-icon class="secondFloor"></ion-icon></button>
+        <button ion-fab (click)="changeFloor(0)"><ion-icon class="groundFloor"></ion-icon></button>
+        <button ion-fab (click)="changeFloor(1)"><ion-icon class="firstFloor"></ion-icon></button>
+        <button ion-fab (click)="changeFloor(2)"><ion-icon class="secondFloor"></ion-icon></button>
       </ion-fab-list>
     </ion-fab>
   </ion-scroll>

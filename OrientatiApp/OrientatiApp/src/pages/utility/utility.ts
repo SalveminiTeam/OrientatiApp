@@ -144,5 +144,4 @@ export class UtilityPage {
         profileModal.onDidDismiss( () => { this.reset(); });
         profileModal.present();
     }
-
 }

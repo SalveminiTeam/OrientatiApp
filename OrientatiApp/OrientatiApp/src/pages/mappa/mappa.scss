@@ -11,23 +11,30 @@
   }
 
   .mapImg {
+    display: block;
+    margin: auto;
     max-width: none;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all 100ms ease-in;
-    -ms-transition: all 100ms ease-in;
-    -moz-transition: all 100ms ease-in;
-    transition: all 100ms ease-in;
+    transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
   }
 
-  .mapDiv{
-    width: 100%;
+  .mapDiv {
+    text-align: center;
+    display: table;
     height: 100%;
+    width: 100%;
+    padding: 18px;
+    transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
   }
 
   .scroll-zoom-wrapper {
     height: 100%;
     display: flex;
-    //justify-content: center;
     flex-direction: row;
     overflow-x: auto;
     overflow-y: auto;
@@ -53,16 +60,16 @@
 
   .groundFloor {
     content: url(../assets/icon/ground-floor.svg);
-    height: calc(100% + 3px);
+    height: calc(100% + 5px);
   }
 
   .firstFloor {
     content: url(../assets/icon/first-floor.svg);
-    height: calc(100% + 3px);
+    height: calc(100% + 5px);
   }
 
   .secondFloor {
     content: url(../assets/icon/second-floor.svg);
-    height: calc(100% + 3px);
+    height: calc(100% + 5px);
   }
 }

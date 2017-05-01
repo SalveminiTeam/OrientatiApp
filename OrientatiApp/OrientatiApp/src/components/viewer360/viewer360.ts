@@ -135,6 +135,9 @@ export class Viewer360Component {
     }
 
     stopAnimation() {
+
+        this.renderer.clear();
+
         this.animating = false;
     }
 
@@ -144,6 +147,13 @@ export class Viewer360Component {
             this.renderer.render(this.scene, this.camera)
             requestAnimationFrame(() => { this.render() });
         }
+        else {
+            this.camera = undefined;
+            this.controls = undefined;
+            this.renderer = undefined;
+            this.scene = undefined;
+            this.manager = undefined;
+         }
     }
 
 

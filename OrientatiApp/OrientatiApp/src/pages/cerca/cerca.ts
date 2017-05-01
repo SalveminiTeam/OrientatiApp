@@ -1,5 +1,5 @@
 ﻿import { Component } from '@angular/core';
-import { NavController, ModalController, Keyboard } from 'ionic-angular';
+import { NavController, ModalController, Keyboard, ToastController } from 'ionic-angular';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -38,7 +38,7 @@ export class CercaPage {
     isInCat: boolean = false;
 
 
-    constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController, public keyB: Keyboard) {
+    constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController, public keyB: Keyboard, public toastCtrl: ToastController) {
         this.http.get('assets/data/rooms_data.json').map((res: Response) => res.json()).subscribe(data => {
             this.rooms = data.stanze;
             this.cat = data.categorie;
@@ -52,6 +52,7 @@ export class CercaPage {
 
     ionViewWillEnter() {
         this.searchQuery = "";
+        this.updateButton();
 
     }
 
@@ -112,24 +113,34 @@ export class CercaPage {
 
     updateButton() {
 
-        if (!this.isInCat || this.searchQuery == '') {
+        if (this.isInCat || this.searchQuery != '') {
             jss.set('.searchbar-md .searchbar-search-icon', {
-                'display': 'block !important'
+                'display': 'none !important'
             });
 
             jss.set('.searchbar-md .searchbar-md-cancel', {
-                'display': 'none !important'
+                'display': 'block !important'
             });
         } else {
             jss.set('.searchbar-md .searchbar-search-icon', {
-                'display': 'none !important'
+                'display': 'block !important'
             });
 
             jss.set('.searchbar-md .searchbar-md-cancel', {
-                'display': 'block !important'
+                'display': 'none !important'
             });
         }
 
     }
+
+    showToast(msg: string, duration: number = 2000, position: string = "bottom") {
+        let toast = this.toastCtrl.create({
+            message: msg,
+            duration: duration,
+            position: position
+        });
+        toast.present();
+    }
+
 
 }
