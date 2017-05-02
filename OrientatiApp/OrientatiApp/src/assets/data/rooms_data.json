@@ -68,12 +68,12 @@
       "descrizione": "",
       "piano": 0,
       "foto": "assets/img/photos/bar.png",
-      "photo360": ""
+      "photo360": "bar"
     },
     {
       "nome": "Biblioteca",
       "categoria": "Servizi e Sport",
-      "descrizione": "",
+      "descrizione": "Questa è la biblioteca. Qui si può aspettare prima di entrare in classe se si è in ritardo. Ha una vasta gamma di libri e molti computer. È situata al piano terra.",
       "piano": 0,
       "foto": "assets/img/photos/biblioteca.png",
       "photo360": "biblioteca"
@@ -95,17 +95,9 @@
       "photo360": "saletta"
     },
     {
-      "nome": "Corridoio Palestra",
-      "categoria": "Servizi e Sport",
-      "descrizione": "",
-      "piano": 0,
-      "foto": "assets/img/photos/corridoioPalestra.png",
-      "photo360": "corridoioPalestra"
-    },
-    {
       "nome": "Aula di Fisica",
       "categoria": "Laboratori",
-      "descrizione": "",
+      "descrizione": "Questo è il laboratorio di fisica. Vi si può accedere nelle ore di fisica. Si divide in due parti: una dotata di sedie, banchi, lavagne e una LIM (come in classe normale), e la parte del laboratorio vero e proprio. È fornito di materiale utile per esperimenti. È situata al secondo piano.",
       "piano": 1,
       "foto": "assets/img/photos/lab3.png",
       "photo360": "aulaDiFisica"
@@ -116,7 +108,7 @@
       "descrizione": "Questo è il laboratorio informatico. È fornito di diverse unità di computer, una LIM e un impianto stereo. È situato al primo piano.",
       "piano": 1,
       "foto": "assets/img/photos/lab1.png",
-      "photo360": ""
+      "photo360": "matlab"
     },
     {
       "nome": "Laboratorio di Chimica",

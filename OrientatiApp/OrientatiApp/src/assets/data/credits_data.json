@@ -1,0 +1,42 @@
+﻿{
+  "types": [
+    {
+      "nome": "Il Team",
+      "team": [
+        {
+          "nome": "Antonio Pio Maggio",
+          "ruolo": "Programmatore, Team Supervisor"
+        },
+        {
+          "nome": "Giuseppe Itta",
+          "ruolo": "UI Designer"
+        },
+        {
+          "nome": "Ilaria Capitanelli",
+          "ruolo": "Addetta alla fotografia"
+        },
+        {
+          "nome": "Roberto Sciacovelli",
+          "ruolo": "Addetto ai contenuti"
+        },
+        {
+          "nome": "Andrea Cipriani",
+          "ruolo": "Interlocutore, Hardwere Tecnical Sup."
+        }
+      ]
+    },
+    {
+      "nome": "Grazie anche a...",
+      "team": [
+        {
+          "nome": "Luca Formicola",
+          "ruolo": "Test applicazione"
+        },
+        {
+          "nome": "Paolo Urbano",
+          "ruolo": "Ideatore design Pagina Dettagli"
+        }
+      ]
+    }
+  ]
+}

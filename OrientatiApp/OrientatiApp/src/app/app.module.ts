@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
 import { MyApp } from './app.component';
 
 import { CercaPage } from '../pages/cerca/cerca';
@@ -14,6 +15,9 @@ import { DettagliPage } from '../pages/dettagli/dettagli';
 import { Cart } from '../pages/cart/cart';
 import { HomePage } from '../pages/home/home';
 import { Thanks } from '../pages/thanks/thanks';
+import { Credits } from '../pages/credits/credits'
+
+import { PopoverPage } from '../components/popoverMenu/popoverPage';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,12 +34,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DettagliPage,
     Cart,
     HomePage,
-    Thanks
+    Thanks,
+    PopoverPage,
+    Credits
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,7 +56,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     DettagliPage,
     Cart,
     HomePage,
-    Thanks
+    Thanks,
+    PopoverPage,
+    Credits
   ],
   providers: [
     StatusBar,

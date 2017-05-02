@@ -1,5 +1,5 @@
 ﻿import { Component, ViewChild, AfterViewInit, ElementRef, ChangeDetectorRef } from '@angular/core';
-import { NavController, ModalController, ToastController } from 'ionic-angular';
+import { NavController, ModalController, ToastController, Gesture, FabContainer, PopoverController } from 'ionic-angular';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 import _ from "lodash";
 
 import { DettagliPage } from '../dettagli/dettagli'
+import { PopoverPage } from '../../components/popoverMenu/popoverPage'
 
 declare const imageMapResize;
 
@@ -35,13 +36,19 @@ export class MappaPage implements AfterViewInit {
 
     pinch;
 
+    transforms = [];
+    adjustScale = 1;
+
+    currentScale = null;
+
+
     heightT: number = 100;
     height1: number = 100;
     height2: number = 100;
 
     heightMax: number = 300;
     heightMin: number = 100;
-    heightStep: number = 30;
+    heightStep: number = 35;
 
     opacityT: number = 1;
     opacity1: number = 0;
@@ -51,9 +58,11 @@ export class MappaPage implements AfterViewInit {
     display1: string = 'none';
     display2: string = 'none';
 
+    zoomed: boolean = false;
+
     floor: number = 0;
 
-    constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController, private cd: ChangeDetectorRef, public toastCtrl: ToastController) {
+    constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController, private cd: ChangeDetectorRef, public toastCtrl: ToastController, public popoverCtrl: PopoverController) {
         this.http.get('assets/data/rooms_data.json').map((res: Response) => res.json()).subscribe(data => {
             this.rooms = data.stanze;
 
@@ -66,22 +75,64 @@ export class MappaPage implements AfterViewInit {
         this.updateMapSize();
     }
 
+    ionViewWillLeave() {
+        this.resetZoom();
+    }
+
+
     range(val: number, min: number, max: number, oldMin: number = 0.5, oldMax: number = 2): number {
         return (((val - oldMin) * (max - min)) / (oldMax - oldMin)) + min;
     }
 
-    onPinch(e) {
-        this.pinch = e.scale;
+    doubleTap() {
+        if (this.zoomed) {
+            this.zoomOut(90);
+        } else if (!this.zoomed) {
+            this.zoomIn(90);
+        }
 
-        let zoom: number = e.scale.toPrecision(2);
-
-        this.setHeight(this.range(zoom, this.heightMin, this.heightMax));
-
-       
+        this.zoomed = !this.zoomed;
     }
 
+    onPinch(e) {
+        
+        /*this.transforms = [];
+
+        // Adjusting the current pinch/pan event properties using the previous ones set when they finished touching
+        this.currentScale = this.adjustScale * this.range(e.scale, 0.2, 1.5, 0.9, 3);
+        console.log(e.scale);
+        console.log(this.currentScale);
+        // Concatinating and applying parameters.
+        if (this.currentScale < 1) {
+            this.currentScale = 1;
+        }
+
+        this.setHeight(this.clamp(this.range(this.currentScale, this.heightMin, this.heightMax, 1, 4), this.heightMin, this.heightMax));
+        */
+        }
+
+    clamp(val, min, max): number {
+        if (val >= max) {
+            return max;
+        } else if (val <= min) {
+            return min;
+        } else { return val; }
+    };
+
+    onTouchEnd() {
+        this.adjustScale = this.currentScale;
+    }
+
+ 
     getIdxByName(list, name: string) {
         return list.findIndex(roomI => roomI.nome == name);
+    }
+
+    presentPopover(myEvent) {
+        let popover = this.popoverCtrl.create(PopoverPage);
+        popover.present({
+            ev: myEvent
+        });
     }
 
     enterRoom(name: string) {
@@ -103,15 +154,15 @@ export class MappaPage implements AfterViewInit {
     }
 
 
-  zoomIn() {
+    zoomIn(hStep: number = this.heightStep) {
 
       let height: number = this.getHeight();  
       let tempHeight: number;
 
-      tempHeight = height + this.heightStep;
+      tempHeight = height + hStep;
 
       if (tempHeight <= this.heightMax)
-          this.setHeight(height + this.heightStep);
+          this.setHeight(height + hStep);
       else
           this.setHeight(this.heightMax);
 
@@ -119,15 +170,15 @@ export class MappaPage implements AfterViewInit {
 
   }
 
-  zoomOut() {
+    zoomOut(hStep: number = this.heightStep) {
 
       let height: number = this.getHeight();
       let tempHeight: number;
 
-      tempHeight = height - this.heightStep;
+      tempHeight = height - hStep;
 
       if (tempHeight >= this.heightMin)
-          this.setHeight(height - this.heightStep);
+          this.setHeight(height - hStep);
       else
           this.setHeight(this.heightMin);
 
@@ -171,8 +222,10 @@ export class MappaPage implements AfterViewInit {
   }
 
 
-  changeFloor(floor: number) {
+  changeFloor(floor: number, fab: FabContainer) {
       this.floor = floor;
+
+      this.resetZoom();
 
       switch (floor) {
           case 0:
@@ -218,6 +271,10 @@ export class MappaPage implements AfterViewInit {
 
               break;
       }
+
+
+      fab.close(); 
+
   }
 
   updateMapSize() {
@@ -250,5 +307,12 @@ export class MappaPage implements AfterViewInit {
       });
       toast.present();
   }
+
+  resetZoom() {
+      this.heightT = 100;
+      this.height1 = 100;
+      this.height2 = 100;
+  }
+
 
 }

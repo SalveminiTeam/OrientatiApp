@@ -14,7 +14,25 @@
 
 
 <ion-content padding>
-  <h3>Descrizione</h3>
+  <ion-slides pager>
+
+    <ion-slide>
+      <div style="height: 100%; margin: auto; content: url(assets/icon/no-photo.svg);"></div>
+      <h2 style="position:absolute; top: 40%; left: 50%; width:100%; transform:translate(-50%); background-color:rgba(0, 0, 0, 0.50); color: white; padding-top:2px; padding-bottom:2px;">Coming soon...</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <div style="height: 100%; margin: auto; content: url(assets/icon/no-photo.svg);"></div>
+      <h2 style="position:absolute; top: 40%; left: 50%; width:100%; transform:translate(-50%); background-color:rgba(0, 0, 0, 0.50); color: white; padding-top:2px; padding-bottom:2px;">Coming soon...</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <div style="height: 100%; margin: auto; content: url(assets/icon/no-photo.svg);"></div>
+      <h2 style="position:absolute; top: 40%; left: 50%; width:100%; transform:translate(-50%); background-color:rgba(0, 0, 0, 0.50); color: white; padding-top:2px; padding-bottom:2px;">Coming soon...</h2>
+    </ion-slide>
+
+    
+  </ion-slides>
   <p>{{descrizione}}</p>
   <h3>Foto 360°</h3>
   <ion-card (tap)="show360()">

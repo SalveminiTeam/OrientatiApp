@@ -47,16 +47,16 @@ export class Cart {
     }
 
     deny() {
-        this.viewCtrl.dismiss();
+        this.viewCtrl.dismiss(true);
     }
 
     back() {
-        this.navCtrl.pop();
+        this.viewCtrl.dismiss(false);
     }
 
     submit() {
         let profileModal = this.modalCtrl.create(Thanks);
-        profileModal.onDidDismiss( () => { this.back(); })
+        profileModal.onDidDismiss(() => { this.deny(); })
         profileModal.present();
     }
 

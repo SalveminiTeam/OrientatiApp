@@ -36,11 +36,15 @@ export class DettagliPage {
     }
 
     ionViewWillEnter() {
-
+        jss.set('.toolbar-md-toolbar .toolbar-background-md, .toolbar-ios-toolbar .toolbar-background-ios', {
+            'background-image': 'url("' + this.photo + '")'
+        });
     }
 
-    ionViewWillLeave() {
-   
+    ionViewDidLeave() {
+        jss.set('.toolbar-md-toolbar .toolbar-background-md, .toolbar-ios-toolbar .toolbar-background-ios', {
+            'background-image': 'none'
+        });
     }
 
     show360() {
@@ -49,9 +53,11 @@ export class DettagliPage {
     }
 
     back() {
-        jss.set('.toolbar-md-toolbar .toolbar-background-md, .toolbar-ios-toolbar .toolbar-background-ios', {
-            'background-image': 'none'
-        });
         this.navCtrl.pop();
+        setTimeout(() => {
+            jss.set('.toolbar-md-toolbar .toolbar-background-md, .toolbar-ios-toolbar .toolbar-background-ios', {
+                'background-image': 'none'
+            });
+        }, 150);
     }
 }

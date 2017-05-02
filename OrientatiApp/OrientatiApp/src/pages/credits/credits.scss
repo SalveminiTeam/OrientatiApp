@@ -1,0 +1,24 @@
+﻿page-credits {
+  .list-item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ion-item[no-padding] {
+    padding-left: 0px;
+  }
+
+  .list-md, .list-ios {
+    margin: 0px 0 0px 0;
+  }
+
+  .back {
+    margin-right: 5px;
+    margin-left: 8px;
+  }
+
+  .list-md .item-block .item-inner, .list-ios .item-block .item-inner {
+    padding-left: 25px;
+  }
+}

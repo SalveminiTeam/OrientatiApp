@@ -82,7 +82,6 @@ export class CercaPage {
             return found;
         });
 
-        this.updateButton();
     }
 
     enterCat(item: ICategory) {
@@ -114,19 +113,19 @@ export class CercaPage {
     updateButton() {
 
         if (this.isInCat || this.searchQuery != '') {
-            jss.set('.searchbar-md .searchbar-search-icon', {
+            jss.set('page-cerca .searchbar-md .searchbar-search-icon', {
                 'display': 'none !important'
             });
 
-            jss.set('.searchbar-md .searchbar-md-cancel', {
+            jss.set('page-cerca .searchbar-md .searchbar-md-cancel', {
                 'display': 'block !important'
             });
         } else {
-            jss.set('.searchbar-md .searchbar-search-icon', {
+            jss.set('page-cerca .searchbar-md .searchbar-search-icon', {
                 'display': 'block !important'
             });
 
-            jss.set('.searchbar-md .searchbar-md-cancel', {
+            jss.set('page-cerca .searchbar-md .searchbar-md-cancel', {
                 'display': 'none !important'
             });
         }

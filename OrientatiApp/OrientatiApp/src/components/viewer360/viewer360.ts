@@ -1,4 +1,4 @@
-﻿import { Component, ElementRef, ViewChild } from '@angular/core';
+﻿import { Component, ElementRef, ViewChild, OnDestroy } from '@angular/core';
 declare const THREE;
 
 
@@ -6,7 +6,7 @@ declare const THREE;
     selector: 'viewer360',
     templateUrl: 'viewer360.html'
 })
-export class Viewer360Component {
+export class Viewer360Component implements OnDestroy {
 
     camera;
     controls;
@@ -22,10 +22,19 @@ export class Viewer360Component {
 
     }
 
+    ngOnDestroy() {
+        
+        if (this.renderer) this.renderer.dispose();
+
+        if (this.controls) this.controls.dispose();
+
+
+    }
+
     Init(imagePath: string) {
 
         this.manager = new THREE.LoadingManager();
-
+        
         this.renderer = new THREE.WebGLRenderer();
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -136,7 +145,15 @@ export class Viewer360Component {
 
     stopAnimation() {
 
+
         this.renderer.clear();
+
+//        if (this.manager) this.manager.dispose();
+        //if (this.renderer) this.renderer.dispose();
+//        if (this.camera) this.camera.dispose();
+//        if (this.scene) this.scene.dispose();
+        //if (this.controls) this.controls.dispose();
+
 
         this.animating = false;
     }
@@ -147,13 +164,6 @@ export class Viewer360Component {
             this.renderer.render(this.scene, this.camera)
             requestAnimationFrame(() => { this.render() });
         }
-        else {
-            this.camera = undefined;
-            this.controls = undefined;
-            this.renderer = undefined;
-            this.scene = undefined;
-            this.manager = undefined;
-         }
     }
 
 

@@ -141,7 +141,11 @@ export class UtilityPage {
 
     submit() {
         let profileModal = this.modalCtrl.create(Cart, { cart: this.cart });
-        profileModal.onDidDismiss( () => { this.reset(); });
+        profileModal.onWillDismiss((value) => {
+            if (value) {
+                this.reset();
+            }
+        });
         profileModal.present();
     }
 }

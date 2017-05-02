@@ -1,19 +1,23 @@
 ﻿<ion-header>
   <ion-navbar color="tabMap">
-    <ion-title>Mappa {{pinchH}}</ion-title>
-    <ion-buttons end>
-      <button ion-button color="light" onclick="location.href='http://google.com'">
+    <ion-title>Mappa</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="presentPopover($event)">
+          <ion-icon name="more"></ion-icon>
+        </button>
+      </ion-buttons>
+     <!--<ion-buttons end><button ion-button color="light" onclick="location.href='https://goo.gl/forms/9Sx1cBAxN3Ks9ReP2'">
         <ion-icon name="paper"></ion-icon>
         &nbsp;feedback
       </button>
-    </ion-buttons>
+    </ion-buttons>--> 
   </ion-navbar>
 </ion-header>
 
 <ion-content >
-  <ion-scroll scrollX="true" scrollY="true" zoom="true" (pinch)="onPinch($event)">
+  <ion-scroll scrollX="true" scrollY="true" zoom="true" (pinch)="onPinch($event)" (touchend)="onTouchEnd($event)" (dblclick)="doubleTap()">
     <div [ngStyle]="{'opacity': opacityT, 'display': displayT}" class="mapDiv" >
-      <img [ngStyle]="{'height': heightT.toString() + '%'}" src="assets/maps/Pt.png" class="mapImg" usemap="#MapT"/>
+      <img [ngStyle]="{'height': heightT.toString() + '%'}" src="assets/maps/Pt.png" class="mapImg" usemap="#MapT" #image />
       <map name="MapT" id="MapT" #mapT  >
         <area title="Aule" shape="poly" coords="30,2226,154,2225,151,2045,115,2044,112,1387,30,1389" (click)="showToast('Presidenza')"/>
         <area title="Palestra" shape="poly" coords="12,5,649,6,649,139,708,138,707,440,625,439,624,314,14,314" (click)="enterRoom('Palestra Interna')"/>
@@ -59,12 +63,12 @@
       <ion-row><button ion-button icon-only (click)="zoomIn()" color="dark"> <ion-icon name="add"></ion-icon> </button> </ion-row>
       <ion-row><button ion-button icon-only (click)="zoomOut()" color="dark"> <ion-icon name="remove"></ion-icon> </button> </ion-row>
     </ion-row>
-    <ion-fab left bottom>
+    <ion-fab left bottom #fab>
       <button ion-fab color="dark"><ion-icon name="reorder"></ion-icon></button>
       <ion-fab-list side="right">
-        <button ion-fab (click)="changeFloor(0)"><ion-icon class="groundFloor"></ion-icon></button>
-        <button ion-fab (click)="changeFloor(1)"><ion-icon class="firstFloor"></ion-icon></button>
-        <button ion-fab (click)="changeFloor(2)"><ion-icon class="secondFloor"></ion-icon></button>
+        <button ion-fab (click)="changeFloor(0, fab)"><ion-icon class="groundFloor"></ion-icon></button>
+        <button ion-fab (click)="changeFloor(1, fab)"><ion-icon class="firstFloor"></ion-icon></button>
+        <button ion-fab (click)="changeFloor(2, fab)"><ion-icon class="secondFloor"></ion-icon></button>
       </ion-fab-list>
     </ion-fab>
   </ion-scroll>
