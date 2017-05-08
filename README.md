@@ -2,28 +2,8 @@
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
+### I file principale del progetto sono qui ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* [Src Folder](https://bitbucket.org/AntoPio26/orientartiapp/src/b8333a5d7b66863f508f405b05384607a26c4aa6/OrientatiApp/OrientatiApp/src/?at=master)
+* [Assets](https://bitbucket.org/AntoPio26/orientartiapp/src/b8333a5d7b66863f508f405b05384607a26c4aa6/OrientatiApp/OrientatiApp/src/assets/?at=master)
+* [Pages](https://bitbucket.org/AntoPio26/orientartiapp/src/b8333a5d7b66863f508f405b05384607a26c4aa6/OrientatiApp/OrientatiApp/src/pages/?at=master)
