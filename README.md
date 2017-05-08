@@ -2,6 +2,6 @@
 
 ### I file principale del progetto sono qui: ###
 
-* [Src Folder](https://bitbucket.org/AntoPio26/orientartiapp/src/b8333a5d7b66863f508f405b05384607a26c4aa6/OrientatiApp/OrientatiApp/src/?at=master)
-* [Assets](https://bitbucket.org/AntoPio26/orientartiapp/src/b8333a5d7b66863f508f405b05384607a26c4aa6/OrientatiApp/OrientatiApp/src/assets/?at=master)
-* [Pages](https://bitbucket.org/AntoPio26/orientartiapp/src/b8333a5d7b66863f508f405b05384607a26c4aa6/OrientatiApp/OrientatiApp/src/pages/?at=master)
+* [Src Folder](https://github.com/SalveminiTeam/OrientatiApp/tree/master/OrientatiApp/OrientatiApp/src)
+* [Assets](https://github.com/SalveminiTeam/OrientatiApp/tree/master/OrientatiApp/OrientatiApp/src/assets)
+* [Pages](https://github.com/SalveminiTeam/OrientatiApp/tree/master/OrientatiApp/OrientatiApp/src/pages)
